@@ -1,0 +1,10 @@
+C:\Users\time2\source\repos\UnoSpinOnline\UnoSpinOnline\bin\Debug\UnoSpinOnline.exe.config
+C:\Users\time2\source\repos\UnoSpinOnline\UnoSpinOnline\bin\Debug\UnoSpinOnline.exe
+C:\Users\time2\source\repos\UnoSpinOnline\UnoSpinOnline\bin\Debug\UnoSpinOnline.pdb
+C:\Users\time2\source\repos\UnoSpinOnline\UnoSpinOnline\obj\Debug\UnoSpinOnline.csproj.AssemblyReference.cache
+C:\Users\time2\source\repos\UnoSpinOnline\UnoSpinOnline\obj\Debug\UnoSpinOnline.Form1.resources
+C:\Users\time2\source\repos\UnoSpinOnline\UnoSpinOnline\obj\Debug\UnoSpinOnline.Properties.Resources.resources
+C:\Users\time2\source\repos\UnoSpinOnline\UnoSpinOnline\obj\Debug\UnoSpinOnline.csproj.GenerateResource.cache
+C:\Users\time2\source\repos\UnoSpinOnline\UnoSpinOnline\obj\Debug\UnoSpinOnline.csproj.CoreCompileInputs.cache
+C:\Users\time2\source\repos\UnoSpinOnline\UnoSpinOnline\obj\Debug\UnoSpinOnline.exe
+C:\Users\time2\source\repos\UnoSpinOnline\UnoSpinOnline\obj\Debug\UnoSpinOnline.pdb
