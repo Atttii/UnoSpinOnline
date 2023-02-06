@@ -61,7 +61,7 @@ namespace UnoSpinOnline
                                                     } }, { "N/A", new Bitmap[] { Properties.Resources.NA_pickup4, Properties.Resources.NA_changecolor }} };
             
             otherPlayersPictureBoxes = new PictureBox[] { player2PictureBox, player3PictureBox, player4PictureBox, player5PictureBox, player6PictureBox };
-            otherPlayersLabels = new Label[] { player2Label, player3Label, player4Label, player5Label, player6Label };
+            otherPlayersLabels = new Label[] { player1Label, player2Label, player3Label, player4Label, player5Label, player6Label };
 
             foreach (PictureBox p in otherPlayersPictureBoxes)
             {
@@ -80,6 +80,8 @@ namespace UnoSpinOnline
             changeToRedButton.Visible = false;
             changeToYellowButton.Visible = false;
             ColorIndicator.Visible = false;
+            player1Label.Text = "Brandon";
+            player1Label.Visible = true;
 
             forcedPickupAmount = 0;
 
@@ -138,6 +140,7 @@ namespace UnoSpinOnline
             drawCardButton.Visible = true;
             ColorIndicator.Visible = true;
             ColorIndicator.BackColor = Color.Gray;
+            player1Label.BackColor = Color.Orange;
 
             Card firstDiscard = model.PeekDiscardDeck();
             
@@ -171,8 +174,9 @@ namespace UnoSpinOnline
                     {
                         //Current player wins
                         model.PlayCard(selectedCard);
-                        model.PlayerWins();
+                        DisplayCurrentPlayerHand();
                         WinnerScreen();
+                        model.PlayerWins();
                         return;
 
                     }
@@ -189,14 +193,14 @@ namespace UnoSpinOnline
                     {
                         //change direction
                         model.ChangeDirection();
-                        model.EndTurn();
+                        EndTurn();
                         playerPrompt.Text = $"{model.CurrentPlayer().Name()}'s turn.\nThe direction of play has changed!";
                     }
                     else if (playedCard.GetValue() == 12)
                     {
                         //skip next turn
-                        model.EndTurn();
-                        model.EndTurn();
+                        EndTurn();
+                        EndTurn();
                         playerPrompt.Text = $"{model.CurrentPlayer().Name()}'s turn.\nThe previous turn has been skipped!!";
                     }
                     else if (playedCard.GetValue() == 13)
@@ -211,9 +215,13 @@ namespace UnoSpinOnline
                     } 
                     else
                     {
-                        SetCurrentColor(playedCard.GetColor());
-                        model.EndTurn();
+                        EndTurn();
                         playerPrompt.Text = $"{model.CurrentPlayer().Name()}'s turn.";
+                    }
+
+                    if (playedCard.GetColor() != "N/A")
+                    {
+                        SetCurrentColor(playedCard.GetColor());
                     }
 
                     DisplayCurrentPlayerHand();
@@ -237,13 +245,19 @@ namespace UnoSpinOnline
             dealCardsButton.Text = "Play Again";
             AddPlayerButton.Visible = true;
             addPlayerNameTextBox.Visible = true;
+
+            foreach (Label l in otherPlayersLabels)
+            {
+                l.BackColor = Control.DefaultBackColor;
+            }
         }
 
         private void Pickup2()
         {
-            model.EndTurn();
+            EndTurn();
             playerPrompt.Text = $"{model.CurrentPlayer().Name()}'s turn !\nPickup 2!.";
             forcedPickupAmount = 2;
+            playCardButton.Visible = false;
         }
 
         private void Pickup4()
@@ -251,6 +265,7 @@ namespace UnoSpinOnline
             playerPrompt.Text = $"{model.CurrentPlayer().Name()}, choose the color to change it to.";
             ChangeColorSetup();
             forcedPickupAmount = 4;
+            playCardButton.Visible = false;
         }
 
         private void ChangeColorSetup()
@@ -273,8 +288,17 @@ namespace UnoSpinOnline
             drawCardButton.Visible = true;
             
             SetCurrentColor(color);
-            model.EndTurn();
-            playerPrompt.Text = $"{model.CurrentPlayer().Name()}'s turn !\nThe color has been changed to {color}!.";
+            EndTurn();
+            if (forcedPickupAmount > 0)
+            {
+                playerPrompt.Text = $"{model.CurrentPlayer().Name()}'s turn !\nThe color has been changed to {color}!.\nAlso pickup {forcedPickupAmount}";
+                playCardButton.Visible = false;
+            }
+            else
+            {
+                playerPrompt.Text = $"{model.CurrentPlayer().Name()}'s turn !\nThe color has been changed to {color}!.";
+            }
+            
             DisplayCurrentPlayerHand();
         }
 
@@ -425,6 +449,7 @@ namespace UnoSpinOnline
                     if (forcedPickupAmount == 0)
                     {
                         playerPrompt.Text = $"{model.CurrentPlayer().Name()}'s turn.";
+                        playCardButton.Visible = true;
                     } else
                     {
                         playerPrompt.Text = $"Card picked up. {forcedPickupAmount} cards to go.";
@@ -434,7 +459,7 @@ namespace UnoSpinOnline
                 else
                 {
                     model.PickupCard();
-                    model.EndTurn();
+                    EndTurn();
                     playerPrompt.Text = $"{model.CurrentPlayer().Name()}'s turn.";
                     DisplayCurrentPlayerHand();
                 } 
@@ -465,16 +490,17 @@ namespace UnoSpinOnline
                 playerPrompt.Text = $"Player {model.GetNumPlayers()} added.";
 
                 otherPlayersPictureBoxes[addedPlayerNum].Visible = true;
-                otherPlayersLabels[addedPlayerNum].Visible = true;
+                otherPlayersLabels[addedPlayerNum+1].Visible = true;
+                otherPlayersLabels[addedPlayerNum+1].Text = addPlayerNameTextBox.Text;
                 addPlayerNameTextBox.Text = String.Empty;
             }
         }
 
-        private void endTurn(string prompt)
+        private void EndTurn()
         {
+            otherPlayersLabels[model.CurrentPLayerNumber()].BackColor = Control.DefaultBackColor;
             model.EndTurn();
-            DisplayCurrentPlayerHand();
-            playerPrompt.Text = $"{model.CurrentPlayer().Name()}'s turn.\n{prompt}.";
+            otherPlayersLabels[model.CurrentPLayerNumber()].BackColor = Color.Orange;
         }
 
         private void changeToRedButton_Click(object sender, EventArgs e)

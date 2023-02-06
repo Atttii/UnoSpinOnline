@@ -112,6 +112,11 @@ namespace UnoSpinOnline.GameFlow
             return players[playerTurn];
         }
 
+        public int CurrentPLayerNumber()
+        {
+            return playerTurn;
+        }
+
         public void PlayCard(int i)
         {
             //card playability is handled in the view
