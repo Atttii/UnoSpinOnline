@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace UnoSpinN_Unit.Cards
+namespace UnoSpinOnline.Cards
 {
     class CardFactory
     {
@@ -13,9 +13,9 @@ namespace UnoSpinN_Unit.Cards
             return new Card(value, color, spin);
         }
 
-        public Queue<Card> generateDeck()
+        public Deck generateDeck()
         {
-            var deck = new Queue<Card>();
+            var deck = new Deck();
 
             string[] colors = { "Blue", "Green", "Red", "Yellow" };
 
@@ -25,7 +25,7 @@ namespace UnoSpinN_Unit.Cards
                 {
                     if (j < 10)
                     {
-                        deck.Enqueue(createCard(j, colors[i], false));
+                        deck.Add(createCard(j, colors[i], false));
                     }
                     else if (j == 10)
                     {
@@ -33,31 +33,31 @@ namespace UnoSpinN_Unit.Cards
                     }
                     else if (j < 16)
                     {
-                        deck.Enqueue(createCard(j - 10, colors[i], true));
+                        deck.Add(createCard(j - 10, colors[i], true));
                     }
                     else if (j < 20)
                     {
-                        deck.Enqueue(createCard(j - 10, colors[i], false));
+                        deck.Add(createCard(j - 10, colors[i], false));
                     }
                     else if (j < 22)
                     {
-                        deck.Enqueue(createCard(10, colors[i], false));
+                        deck.Add(createCard(10, colors[i], false));
                     }
                     else if (j < 24)
                     {
-                        deck.Enqueue(createCard(13, colors[i], false));
+                        deck.Add(createCard(11, colors[i], false));
                     }
                     else if (j < 26)
                     {
-                        deck.Enqueue(createCard(14, colors[i], false));
+                        deck.Add(createCard(12, colors[i], false));
                     }
                 }
             }
 
             for (int i = 0; i < 3; i++)
             {
-                deck.Enqueue(createCard(11, "N/A", false));
-                deck.Enqueue(createCard(12, "N/A", false));
+                deck.Add(createCard(13, "N/A", false));
+                deck.Add(createCard(14, "N/A", false));
             }
 
             return deck;

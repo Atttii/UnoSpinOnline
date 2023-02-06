@@ -48,6 +48,9 @@
   <ItemGroup>
     <Compile Include="Cards\CardFactory.cs" />
     <Compile Include="Cards\Card.cs" />
+    <Compile Include="Cards\Deck.cs" />
+    <Compile Include="GameFlow\Player.cs" />
+    <Compile Include="GameFlow\GameLoop.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -141,6 +144,174 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Images\blue_pickup2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\green_2_spin.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\green_3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\green_3_spin.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\green_4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\green_4_spin.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\green_5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\green_5_spin.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\green_6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\green_7.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\green_8.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\green_9.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\green_changedirection.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\green_pickup2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\green_skipturn.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\NA_changecolor.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\NA_pickup4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\red_0.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\red_1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\red_1_spin.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\red_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\red_2_spin.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\red_3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\red_3_spin.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\red_4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\red_4_spin.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\red_5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\red_5_spin.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\red_6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\red_8.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\red_9.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\red_changedirection.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\red_pickup2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\red_skipturn.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\yellow_0.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\yellow_1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\yellow_1_spin.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\yellow_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\yellow_2_spin.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\yellow_3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\yellow_3_spin.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\yellow_4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\yellow_4_spin.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\yellow_5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\yellow_5_spin.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\yellow_6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\yellow_7.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\yellow_8.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\yellow_9.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\yellow_changedirection.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\yellow_pickup2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\yellow_skipturn.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\green_1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\green_1_spin.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\green_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\green_0.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\red_7.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
