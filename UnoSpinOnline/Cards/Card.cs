@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace UnoSpinOnline.Cards
 {
+    [Serializable]
     class Card
     {
         private int value;

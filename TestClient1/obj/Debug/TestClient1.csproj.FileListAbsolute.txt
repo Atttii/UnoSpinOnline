@@ -1,0 +1,11 @@
+C:\Users\time2\source\repos\UnoSpinOnline\TestClient1\bin\Debug\TestClient1.exe.config
+C:\Users\time2\source\repos\UnoSpinOnline\TestClient1\bin\Debug\TestClient1.exe
+C:\Users\time2\source\repos\UnoSpinOnline\TestClient1\bin\Debug\TestClient1.pdb
+C:\Users\time2\source\repos\UnoSpinOnline\TestClient1\bin\Debug\SuperSimpleTcp.dll
+C:\Users\time2\source\repos\UnoSpinOnline\TestClient1\obj\Debug\TestClient1.Form1.resources
+C:\Users\time2\source\repos\UnoSpinOnline\TestClient1\obj\Debug\TestClient1.Properties.Resources.resources
+C:\Users\time2\source\repos\UnoSpinOnline\TestClient1\obj\Debug\TestClient1.csproj.GenerateResource.cache
+C:\Users\time2\source\repos\UnoSpinOnline\TestClient1\obj\Debug\TestClient1.csproj.CoreCompileInputs.cache
+C:\Users\time2\source\repos\UnoSpinOnline\TestClient1\obj\Debug\TestClient1.csproj.CopyComplete
+C:\Users\time2\source\repos\UnoSpinOnline\TestClient1\obj\Debug\TestClient1.exe
+C:\Users\time2\source\repos\UnoSpinOnline\TestClient1\obj\Debug\TestClient1.pdb

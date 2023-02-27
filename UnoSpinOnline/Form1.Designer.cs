@@ -108,7 +108,8 @@ namespace UnoSpinOnline
             this.dealCardsButton.Name = "dealCardsButton";
             this.dealCardsButton.Size = new System.Drawing.Size(75, 23);
             this.dealCardsButton.TabIndex = 3;
-            this.dealCardsButton.Text = "Deal Cards";
+            this.dealCardsButton.Text = "Ready";
+            this.dealCardsButton.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.dealCardsButton.UseVisualStyleBackColor = true;
             this.dealCardsButton.Click += new System.EventHandler(this.dealButton_Click);
             // 
@@ -117,9 +118,8 @@ namespace UnoSpinOnline
             this.playerPrompt.AutoSize = true;
             this.playerPrompt.Location = new System.Drawing.Point(12, 259);
             this.playerPrompt.Name = "playerPrompt";
-            this.playerPrompt.Size = new System.Drawing.Size(72, 13);
+            this.playerPrompt.Size = new System.Drawing.Size(0, 13);
             this.playerPrompt.TabIndex = 4;
-            this.playerPrompt.Text = "Player Prompt";
             // 
             // playCardButton
             // 
@@ -211,7 +211,7 @@ namespace UnoSpinOnline
             this.AddPlayerButton.Name = "AddPlayerButton";
             this.AddPlayerButton.Size = new System.Drawing.Size(75, 23);
             this.AddPlayerButton.TabIndex = 28;
-            this.AddPlayerButton.Text = "Add Player";
+            this.AddPlayerButton.Text = "Join Lobby";
             this.AddPlayerButton.UseVisualStyleBackColor = true;
             this.AddPlayerButton.Click += new System.EventHandler(this.AddPlayerButton_Click);
             // 

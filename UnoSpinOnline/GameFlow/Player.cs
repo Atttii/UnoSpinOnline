@@ -7,15 +7,25 @@ using UnoSpinOnline.Cards;
 
 namespace UnoSpinOnline.GameFlow
 {
+    [Serializable]
     class Player
     {
         private string name;
         private List<Card> hand;
+        private int number;
 
         public Player(string n)
         {
             name = n;
             hand = new List<Card>();
+            number = -1;
+        }
+
+        public Player(string n, int i)
+        {
+            name = n;
+            hand = new List<Card>();
+            number = i;
         }
 
         public void PickupCard(Card c)
@@ -43,6 +53,21 @@ namespace UnoSpinOnline.GameFlow
         public string Name()
         {
             return name;
+        }
+
+        public void SetNumber(int i)
+        {
+            number = i;
+        }
+
+        public int GetNumber()
+        {
+            return number;
+        }
+
+        public void EmptyHand()
+        {
+            hand.Clear();
         }
 
     }

@@ -1,0 +1,12 @@
+C:\Users\time2\source\repos\UnoSpinOnline\TcpServer1\bin\Debug\TcpServer1.exe.config
+C:\Users\time2\source\repos\UnoSpinOnline\TcpServer1\bin\Debug\TcpServer1.exe
+C:\Users\time2\source\repos\UnoSpinOnline\TcpServer1\bin\Debug\TcpServer1.pdb
+C:\Users\time2\source\repos\UnoSpinOnline\TcpServer1\bin\Debug\SuperSimpleTcp.dll
+C:\Users\time2\source\repos\UnoSpinOnline\TcpServer1\obj\Debug\TcpServer1.csproj.AssemblyReference.cache
+C:\Users\time2\source\repos\UnoSpinOnline\TcpServer1\obj\Debug\TcpServer1.Form1.resources
+C:\Users\time2\source\repos\UnoSpinOnline\TcpServer1\obj\Debug\TcpServer1.Properties.Resources.resources
+C:\Users\time2\source\repos\UnoSpinOnline\TcpServer1\obj\Debug\TcpServer1.csproj.GenerateResource.cache
+C:\Users\time2\source\repos\UnoSpinOnline\TcpServer1\obj\Debug\TcpServer1.csproj.CoreCompileInputs.cache
+C:\Users\time2\source\repos\UnoSpinOnline\TcpServer1\obj\Debug\TcpServer1.csproj.CopyComplete
+C:\Users\time2\source\repos\UnoSpinOnline\TcpServer1\obj\Debug\TcpServer1.exe
+C:\Users\time2\source\repos\UnoSpinOnline\TcpServer1\obj\Debug\TcpServer1.pdb

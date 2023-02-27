@@ -8,3 +8,5 @@ C:\Users\time2\source\repos\UnoSpinOnline\UnoSpinOnline\obj\Debug\UnoSpinOnline.
 C:\Users\time2\source\repos\UnoSpinOnline\UnoSpinOnline\obj\Debug\UnoSpinOnline.csproj.CoreCompileInputs.cache
 C:\Users\time2\source\repos\UnoSpinOnline\UnoSpinOnline\obj\Debug\UnoSpinOnline.exe
 C:\Users\time2\source\repos\UnoSpinOnline\UnoSpinOnline\obj\Debug\UnoSpinOnline.pdb
+C:\Users\time2\source\repos\UnoSpinOnline\UnoSpinOnline\bin\Debug\SuperSimpleTcp.dll
+C:\Users\time2\source\repos\UnoSpinOnline\UnoSpinOnline\obj\Debug\UnoSpinOnline.csproj.CopyComplete

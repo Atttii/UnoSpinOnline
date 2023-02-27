@@ -1,33 +1,33 @@
 ﻿using System;
-using System.IO;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+using System.Collections.Generic;;
 using System.Drawing;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using UnoSpinOnline.GameFlow;
 using UnoSpinOnline.Cards;
+using SuperSimpleTcp;
 
 namespace UnoSpinOnline
 {
     public partial class Form1 : Form
     {
         private GameLoop model;
+        private SimpleTcpClient client;
         private PictureBox[] picArr;
         private int selectedCard = -1;
         private Dictionary<string, Bitmap[]> imageMap;
         private PictureBox[] otherPlayersPictureBoxes;
         private Label[] otherPlayersLabels;
-        private int forcedPickupAmount;
-        private string currentColor;
+        private bool gameStarted;
+        private int playerNumber;
+        private const string IPPORT = "127.0.0.1:8080";
 
         public Form1()
         {
             InitializeComponent();
             model = new GameLoop();
+            playerNumber = -1;
+            gameStarted = false;
             picArr = new PictureBox[] { card1, card2, card3, card4, card5, card6, card7, card8, card9 };
 
             imageMap = new Dictionary<string, Bitmap[]>() {{"Blue", new Bitmap[] { Properties.Resources.blue_0, Properties.Resources.blue_1,
@@ -61,7 +61,7 @@ namespace UnoSpinOnline
                                                     } }, { "N/A", new Bitmap[] { Properties.Resources.NA_pickup4, Properties.Resources.NA_changecolor }} };
             
             otherPlayersPictureBoxes = new PictureBox[] { player2PictureBox, player3PictureBox, player4PictureBox, player5PictureBox, player6PictureBox };
-            otherPlayersLabels = new Label[] { player1Label, player2Label, player3Label, player4Label, player5Label, player6Label };
+            otherPlayersLabels = new Label[] { player2Label, player3Label, player4Label, player5Label, player6Label };
 
             foreach (PictureBox p in otherPlayersPictureBoxes)
             {
@@ -73,6 +73,11 @@ namespace UnoSpinOnline
                 l.Visible = false;
             }
 
+            foreach (PictureBox p in picArr)
+            {
+                p.Visible = false;
+            }
+
             playCardButton.Visible = false;
             drawCardButton.Visible = false;
             changeToBlueButton.Visible = false;
@@ -80,12 +85,175 @@ namespace UnoSpinOnline
             changeToRedButton.Visible = false;
             changeToYellowButton.Visible = false;
             ColorIndicator.Visible = false;
-            player1Label.Text = "Brandon";
-            player1Label.Visible = true;
+            player1Label.Visible = false;
+            playerHand1.Visible = false;
+            dealCardsButton.Visible = false;
 
-            forcedPickupAmount = 0;
+            client = new SimpleTcpClient(IPPORT);
+            client.Events.DataReceived += Events_DataReceived;
+        }
 
-            model.AddPlayer("Brandon");
+        private void Events_DataReceived(object sender, DataReceivedEventArgs e)
+        {
+            this.Invoke((MethodInvoker)delegate
+            {
+                if (gameStarted)
+                {
+                    model = new GameLoop(e.Data.Array);
+
+                    SetCurrentColor(model.GetCurrentColor());
+                    DisplayCurrentPlayerHand();
+
+                    if (playerNumber == model.GetPlayerTurn() && model.GetWinner() == -1)
+                    {
+                        StartTurn();
+                    }
+                    else if (model.GetWinner() != -1)
+                    {
+                        WinnerScreen(model.GetWinner());
+                        gameStarted = false;
+
+                        model.ResetGame();
+                        client.Send(model.Serialize());
+                        
+                        if (playerNumber == 0)
+                        {
+                            model.ResetGame();
+                            client.Send(model.Serialize());
+                        }
+                    }
+                    else
+                    {
+                        foreach(Label l in otherPlayersLabels)
+                        {
+                            l.BackColor = SystemColors.ControlLight;
+                        }
+
+                        if (model.GetPlayerTurn() < playerNumber)
+                        {
+                            otherPlayersLabels[model.GetPlayerTurn()].BackColor = Color.Orange;
+                        }
+                        else
+                        {
+                            otherPlayersLabels[model.GetPlayerTurn() - 1].BackColor = Color.Orange;
+                        }
+
+                        playerPrompt.Text = model.GetPlayer(model.GetPlayerTurn()).Name() + "'s turn.";
+                    }
+
+
+                }
+                else
+                {
+                    
+                    if (Encoding.UTF8.GetString(e.Data.Array).StartsWith("new player-"))
+                    {
+                        if (playerNumber == 0)
+                        {
+                            dealCardsButton.Visible = true;
+                            model.AddPlayer(Encoding.UTF8.GetString(e.Data.Array).Substring(11, Encoding.UTF8.GetString(e.Data.Array).Length - 12));
+                            client.Send(model.Serialize());
+                        }
+                    } else if (Encoding.UTF8.GetString(e.Data.Array).StartsWith("player number-"))
+                    {
+
+                        if (playerNumber == -1)
+                        {
+                            playerNumber = Encoding.UTF8.GetString(e.Data.Array)[14] - '0';
+                        }
+
+                        client.Send($"new player-{Encoding.UTF8.GetString(e.Data.Array).Substring(16, Encoding.UTF8.GetString(e.Data.Array).Length-17)}");   
+                    }
+                    else
+                    {
+                        model = new GameLoop(e.Data.Array);
+
+                        if (model.GetGameStarting())
+                        {
+                            //model.SetGameStarting(false);
+                            gameStarted = true;
+                            StartGame();
+                            return;
+                        }
+
+
+                        for (int i = 0; i < model.GetNumPlayers(); i++)
+                        {
+                            if (i < playerNumber)
+                            {
+                                otherPlayersPictureBoxes[i].Visible = true;
+                                otherPlayersLabels[i].Visible = true;
+                                otherPlayersLabels[i].Text = model.GetPlayer(i).Name();
+
+                            }
+                            else if (i > playerNumber)
+                            {
+                                otherPlayersPictureBoxes[i - 1].Visible = true;
+                                otherPlayersLabels[i - 1].Visible = true;
+                                otherPlayersLabels[i - 1].Text = model.GetPlayer(i).Name();
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        private void StartGame()
+        {
+            DisplayCurrentPlayerHand();
+            dealCardsButton.Visible = false;
+            addPlayerNameTextBox.Visible = false;
+            AddPlayerButton.Visible = false;
+
+            Card firstDiscard = model.PeekDiscardDeck();
+
+            if (firstDiscard.GetColor().Equals("N/A"))
+            {
+                discardPile.Image = imageMap[firstDiscard.GetColor()][firstDiscard.GetValue() - 13];
+                ChangeColorSetup();
+            }
+            else
+            {
+                discardPile.Image = imageMap[firstDiscard.GetColor()][firstDiscard.GetValue()];
+                SetCurrentColor(firstDiscard.GetColor());
+            }
+
+            if (model.GetPlayerTurn() == playerNumber)
+            {
+                StartTurn();
+            } else if (model.GetPlayerTurn() < playerNumber)
+            {
+                playerPrompt.Text = model.CurrentPlayer().Name() + "'s turn.";
+                otherPlayersLabels[model.GetPlayerTurn()].BackColor = Color.Orange;
+            } else
+            {
+                playerPrompt.Text = model.CurrentPlayer().Name() + "'s turn.";
+                otherPlayersLabels[model.GetPlayerTurn() - 1].BackColor = Color.Orange;
+            }
+        }
+
+        private void StartTurn()
+        {
+            playCardButton.Visible = true;
+            drawCardButton.Visible = true;
+            ColorIndicator.Visible = true;
+            player1Label.BackColor = Color.Orange;
+
+            foreach(Label l in otherPlayersLabels) 
+            {
+                l.BackColor = SystemColors.ControlLight;
+            }
+
+            if (model.GetForcedPickupAmount() > 0)
+            {
+                playCardButton.Visible = false;
+                playerPrompt.Text = "Pickup " + model.GetForcedPickupAmount() + "!";
+            } else
+            {
+                playerPrompt.Text = "Your turn.";
+            }
+
+            Card firstDiscard = model.PeekDiscardDeck();           
         }
 
 
@@ -102,7 +270,7 @@ namespace UnoSpinOnline
 
         private void DisplayCurrentPlayerHand()
         {
-            Player currentPLayer = model.CurrentPlayer();
+            Player currentPLayer = model.GetPlayer(playerNumber);
 
             for (int i = 0; i < currentPLayer.HandSize(); i++)
             {
@@ -121,6 +289,15 @@ namespace UnoSpinOnline
                 picArr[i].Visible = false;
             }
 
+            if (model.PeekDiscardDeck().GetColor().Equals("N/A"))
+            {
+                discardPile.Image = imageMap[model.PeekDiscardDeck().GetColor()][model.PeekDiscardDeck().GetValue()-13];
+            }
+            else
+            {
+                discardPile.Image = imageMap[model.PeekDiscardDeck().GetColor()][model.PeekDiscardDeck().GetValue()];
+            }
+
             selectedCard = -1;
         }
 
@@ -130,78 +307,51 @@ namespace UnoSpinOnline
         }
         private void dealButton_Click(object sender, EventArgs e)
         {
+            model.SetGameStarting(true);
             model.DealCards();
-
-            DisplayCurrentPlayerHand();
-            dealCardsButton.Visible = false;
-            addPlayerNameTextBox.Visible = false;
-            AddPlayerButton.Visible = false;
-            playCardButton.Visible = true;
-            drawCardButton.Visible = true;
-            ColorIndicator.Visible = true;
-            ColorIndicator.BackColor = Color.Gray;
-            player1Label.BackColor = Color.Orange;
-
-            Card firstDiscard = model.PeekDiscardDeck();
-            
-            if (firstDiscard.GetColor().Equals("N/A"))
-            {
-                discardPile.Image = imageMap[firstDiscard.GetColor()][firstDiscard.GetValue() - 13];
-                ChangeColorSetup();
-            }
-            else
-            {
-                discardPile.Image = imageMap[firstDiscard.GetColor()][firstDiscard.GetValue()];
-                SetCurrentColor(firstDiscard.GetColor());
-            }
-
-            playerPrompt.Text = $"{model.CurrentPlayer().Name()}'s turn.";
+            client.Send(model.Serialize());
         }
 
         private void playCardButton_Click(object sender, EventArgs e)
         {
-            //playerPrompt.Text = $"Index {selectedCard}";
-
             if (selectedCard != -1)
             {
-              
-
                 Card playedCard = model.CurrentPlayer().GetCard(selectedCard);
                 
-                if (playedCard.GetColor() == currentColor || playedCard.GetValue() == model.PeekDiscardDeck().GetValue() || playedCard.GetColor() == "N/A")
+                if (playedCard.GetColor() == model.GetCurrentColor() || playedCard.GetValue() == model.PeekDiscardDeck().GetValue() || playedCard.GetColor() == "N/A" || playedCard.GetColor() == model.PeekDiscardDeck().GetColor())
                 {
                     if (model.CurrentPlayer().HandSize() == 1)
                     {
                         //Current player wins
                         model.PlayCard(selectedCard);
                         DisplayCurrentPlayerHand();
-                        WinnerScreen();
-                        model.PlayerWins();
+                        model.SetWinner(playerNumber);
+                        client.Send(model.Serialize());
                         return;
-
                     }
 
                     model.PlayCard(selectedCard);
                     discardPile.Image = picArr[selectedCard].Image;
 
+                    if (playedCard.GetValue() == model.PeekDiscardDeck().GetValue())
+                    {
+                        model.SetCurrentColor(playedCard.GetColor());
+                    } 
+                    
                     if (playedCard.GetValue() == 10)
                     {
-                        //pickup 2
                         Pickup2();
                     }
                     else if (playedCard.GetValue() == 11)
                     {
-                        //change direction
                         model.ChangeDirection();
                         EndTurn();
-                        playerPrompt.Text = $"{model.CurrentPlayer().Name()}'s turn.\nThe direction of play has changed!";
                     }
                     else if (playedCard.GetValue() == 12)
                     {
                         //skip next turn
+                        model.EndTurn();
                         EndTurn();
-                        EndTurn();
-                        playerPrompt.Text = $"{model.CurrentPlayer().Name()}'s turn.\nThe previous turn has been skipped!!";
                     }
                     else if (playedCard.GetValue() == 13)
                     {
@@ -210,13 +360,11 @@ namespace UnoSpinOnline
                     }
                     else if (playedCard.GetValue() == 14)
                     {
-                        //change color
                         ChangeColorSetup();
                     } 
                     else
                     {
                         EndTurn();
-                        playerPrompt.Text = $"{model.CurrentPlayer().Name()}'s turn.";
                     }
 
                     if (playedCard.GetColor() != "N/A")
@@ -228,7 +376,6 @@ namespace UnoSpinOnline
                 } else
                 {
                     //card cannot be played
-                    playerPrompt.Text = $"Card cannot be played.";
                     selectedCard = -1;
                     resetAllCards();
                 }
@@ -236,36 +383,42 @@ namespace UnoSpinOnline
 
         }
 
-        private void WinnerScreen()
+        private void WinnerScreen(int i)
         {
-            playerPrompt.Text = $"{model.CurrentPlayer().Name()} wins!\nPress play again or exit.";
+            playerPrompt.Text = model.GetPlayer(i).Name() + " wins!\nPress play again or exit.";
             playCardButton.Visible = false;
             drawCardButton.Visible = false;
-            dealCardsButton.Visible = true;
             dealCardsButton.Text = "Play Again";
-            AddPlayerButton.Visible = true;
-            addPlayerNameTextBox.Visible = true;
+            //AddPlayerButton.Visible = true;
+            //addPlayerNameTextBox.Visible = true;
+            if (playerNumber==0)
+            {
+                dealCardsButton.Visible = true;
+            }
+
 
             foreach (Label l in otherPlayersLabels)
             {
                 l.BackColor = Control.DefaultBackColor;
             }
+
+            foreach (PictureBox p in picArr)
+            {
+                p.Visible = false;
+            }
         }
 
         private void Pickup2()
         {
-            EndTurn();
-            playerPrompt.Text = $"{model.CurrentPlayer().Name()}'s turn !\nPickup 2!.";
-            forcedPickupAmount = 2;
+            model.AddToForcedPickupAmount(2);
             playCardButton.Visible = false;
         }
 
         private void Pickup4()
         {
-            playerPrompt.Text = $"{model.CurrentPlayer().Name()}, choose the color to change it to.";
+            playerPrompt.Text = model.CurrentPlayer().Name() + ", choose the color to change it to.";
+            model.AddToForcedPickupAmount(4);
             ChangeColorSetup();
-            forcedPickupAmount = 4;
-            playCardButton.Visible = false;
         }
 
         private void ChangeColorSetup()
@@ -288,23 +441,13 @@ namespace UnoSpinOnline
             drawCardButton.Visible = true;
             
             SetCurrentColor(color);
+            model.SetCurrentColor(color);
             EndTurn();
-            if (forcedPickupAmount > 0)
-            {
-                playerPrompt.Text = $"{model.CurrentPlayer().Name()}'s turn !\nThe color has been changed to {color}!.\nAlso pickup {forcedPickupAmount}";
-                playCardButton.Visible = false;
-            }
-            else
-            {
-                playerPrompt.Text = $"{model.CurrentPlayer().Name()}'s turn !\nThe color has been changed to {color}!.";
-            }
-            
-            DisplayCurrentPlayerHand();
         }
 
         private void SetCurrentColor(string color)
         {
-            currentColor = color;
+            //currentColor = color;
 
             if (color == "Green")
             {
@@ -321,10 +464,85 @@ namespace UnoSpinOnline
             }
         }
 
+        private void drawCardButton_Click(object sender, EventArgs e)
+        {
+            if (model.CurrentPlayer().HandSize() < 9)
+            {
+                if (model.GetForcedPickupAmount() > 0)
+                {
+                    model.PickupCard();
+                    model.DecrementForcedPickupAmount();
+                    if (model.GetForcedPickupAmount() == 0)
+                    {
+                        playerPrompt.Text = model.CurrentPlayer().Name() + "'s turn.";
+                        playCardButton.Visible = true;
+                    }
+                    else
+                    {
+                        playerPrompt.Text = "Card picked up. " + model.GetForcedPickupAmount() + " cards to go.";
+                    }
+                    //client.Send(model.Serialize());
+                    DisplayCurrentPlayerHand();
+                }
+                else
+                {
+                    model.PickupCard();
+                    DisplayCurrentPlayerHand();
+                    EndTurn();
+                }
+            }
+        }
+
+
+        private void AddPlayerButton_Click(object sender, EventArgs e)
+        {
+            if (String.IsNullOrEmpty(addPlayerNameTextBox.Text))
+            {
+                playerPrompt.Text = "Error. Please enter a name for the player to be added.";
+            }
+            else
+            {
+                player1Label.Visible = true;
+                player1Label.Text = addPlayerNameTextBox.Text;
+                playerHand1.Visible = true;
+                AddPlayerButton.Visible = false;
+                addPlayerNameTextBox.Visible = false;
+
+                foreach (PictureBox p in picArr)
+                {
+                    p.Visible = true;
+                }
+
+                while (true)
+                {
+                    try
+                    {
+                        client.Connect();
+                        break;
+                    }
+                    catch (Exception)
+                    {
+                        playerPrompt.Text = "Connecting to server...";
+                    }
+                }
+
+                client.Send($"player number-{addPlayerNameTextBox.Text}");
+            }
+        }
+
+        private void EndTurn()
+        {
+            drawCardButton.Visible = false;
+            playCardButton.Visible = false;
+
+            player1Label.BackColor = Control.DefaultBackColor;
+            model.EndTurn();
+            client.Send(model.Serialize());
+        }
+
         private void card1_Click(object sender, EventArgs e)
         {
             resetAllCards();
-
             card1.BorderStyle = BorderStyle.FixedSingle;
             selectedCard = 0;
         }
@@ -438,34 +656,6 @@ namespace UnoSpinOnline
             card9.BorderStyle = BorderStyle.Fixed3D;
         }
 
-        private void drawCardButton_Click(object sender, EventArgs e)
-        {
-            if (model.CurrentPlayer().HandSize() < 9)
-            {
-                if (forcedPickupAmount > 0)
-                {
-                    model.PickupCard();
-                    forcedPickupAmount--;
-                    if (forcedPickupAmount == 0)
-                    {
-                        playerPrompt.Text = $"{model.CurrentPlayer().Name()}'s turn.";
-                        playCardButton.Visible = true;
-                    } else
-                    {
-                        playerPrompt.Text = $"Card picked up. {forcedPickupAmount} cards to go.";
-                    }
-                    DisplayCurrentPlayerHand();
-                } 
-                else
-                {
-                    model.PickupCard();
-                    EndTurn();
-                    playerPrompt.Text = $"{model.CurrentPlayer().Name()}'s turn.";
-                    DisplayCurrentPlayerHand();
-                } 
-            }
-        }
-
         private void label8_Click(object sender, EventArgs e)
         {
 
@@ -474,33 +664,6 @@ namespace UnoSpinOnline
         private void Form1_Load(object sender, EventArgs e)
         {
 
-        }
-
-        private void AddPlayerButton_Click(object sender, EventArgs e)
-        {
-            if (String.IsNullOrEmpty(addPlayerNameTextBox.Text))
-            {
-                playerPrompt.Text = "Error. Please enter a name for the player to be added.";
-            } else
-            {
-                model.AddPlayer(addPlayerNameTextBox.Text);
-
-                int addedPlayerNum = model.GetNumPlayers() - 2;
-
-                playerPrompt.Text = $"Player {model.GetNumPlayers()} added.";
-
-                otherPlayersPictureBoxes[addedPlayerNum].Visible = true;
-                otherPlayersLabels[addedPlayerNum+1].Visible = true;
-                otherPlayersLabels[addedPlayerNum+1].Text = addPlayerNameTextBox.Text;
-                addPlayerNameTextBox.Text = String.Empty;
-            }
-        }
-
-        private void EndTurn()
-        {
-            otherPlayersLabels[model.CurrentPLayerNumber()].BackColor = Control.DefaultBackColor;
-            model.EndTurn();
-            otherPlayersLabels[model.CurrentPLayerNumber()].BackColor = Color.Orange;
         }
 
         private void changeToRedButton_Click(object sender, EventArgs e)
@@ -525,7 +688,7 @@ namespace UnoSpinOnline
 
         private void ColorIndicator_Click(object sender, EventArgs e)
         {
-
+            //do nothing
         }
     }
 }
