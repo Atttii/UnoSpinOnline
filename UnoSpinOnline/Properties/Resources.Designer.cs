@@ -63,6 +63,16 @@ namespace UnoSpinOnline.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap back_of_card {
+            get {
+                object obj = ResourceManager.GetObject("back_of_card", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap blue_0 {
             get {
                 object obj = ResourceManager.GetObject("blue_0", resourceCulture);
@@ -93,6 +103,16 @@ namespace UnoSpinOnline.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap blue_1_spin1 {
+            get {
+                object obj = ResourceManager.GetObject("blue_1_spin1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap blue_2 {
             get {
                 object obj = ResourceManager.GetObject("blue_2", resourceCulture);
@@ -106,6 +126,16 @@ namespace UnoSpinOnline.Properties {
         internal static System.Drawing.Bitmap blue_2_spin {
             get {
                 object obj = ResourceManager.GetObject("blue_2_spin", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap blue_2_spin1 {
+            get {
+                object obj = ResourceManager.GetObject("blue_2_spin1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -133,6 +163,16 @@ namespace UnoSpinOnline.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap blue_3_spin1 {
+            get {
+                object obj = ResourceManager.GetObject("blue_3_spin1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap blue_4 {
             get {
                 object obj = ResourceManager.GetObject("blue_4", resourceCulture);
@@ -153,6 +193,16 @@ namespace UnoSpinOnline.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap blue_4_spin1 {
+            get {
+                object obj = ResourceManager.GetObject("blue_4_spin1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap blue_5 {
             get {
                 object obj = ResourceManager.GetObject("blue_5", resourceCulture);
@@ -166,6 +216,16 @@ namespace UnoSpinOnline.Properties {
         internal static System.Drawing.Bitmap blue_5_spin {
             get {
                 object obj = ResourceManager.GetObject("blue_5_spin", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap blue_5_spin1 {
+            get {
+                object obj = ResourceManager.GetObject("blue_5_spin1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -253,6 +313,16 @@ namespace UnoSpinOnline.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap formBG {
+            get {
+                object obj = ResourceManager.GetObject("formBG", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap green_0 {
             get {
                 object obj = ResourceManager.GetObject("green_0", resourceCulture);
@@ -283,6 +353,16 @@ namespace UnoSpinOnline.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap green_1_spin1 {
+            get {
+                object obj = ResourceManager.GetObject("green_1_spin1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap green_2 {
             get {
                 object obj = ResourceManager.GetObject("green_2", resourceCulture);
@@ -296,6 +376,16 @@ namespace UnoSpinOnline.Properties {
         internal static System.Drawing.Bitmap green_2_spin {
             get {
                 object obj = ResourceManager.GetObject("green_2_spin", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap green_2_spin1 {
+            get {
+                object obj = ResourceManager.GetObject("green_2_spin1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -323,6 +413,16 @@ namespace UnoSpinOnline.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap green_3_spin1 {
+            get {
+                object obj = ResourceManager.GetObject("green_3_spin1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap green_4 {
             get {
                 object obj = ResourceManager.GetObject("green_4", resourceCulture);
@@ -343,6 +443,16 @@ namespace UnoSpinOnline.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap green_4_spin1 {
+            get {
+                object obj = ResourceManager.GetObject("green_4_spin1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap green_5 {
             get {
                 object obj = ResourceManager.GetObject("green_5", resourceCulture);
@@ -356,6 +466,16 @@ namespace UnoSpinOnline.Properties {
         internal static System.Drawing.Bitmap green_5_spin {
             get {
                 object obj = ResourceManager.GetObject("green_5_spin", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap green_5_spin1 {
+            get {
+                object obj = ResourceManager.GetObject("green_5_spin1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -503,6 +623,16 @@ namespace UnoSpinOnline.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap red_2_spin1 {
+            get {
+                object obj = ResourceManager.GetObject("red_2_spin1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap red_3 {
             get {
                 object obj = ResourceManager.GetObject("red_3", resourceCulture);
@@ -516,6 +646,16 @@ namespace UnoSpinOnline.Properties {
         internal static System.Drawing.Bitmap red_3_spin {
             get {
                 object obj = ResourceManager.GetObject("red_3_spin", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap red_3_spin1 {
+            get {
+                object obj = ResourceManager.GetObject("red_3_spin1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -543,6 +683,16 @@ namespace UnoSpinOnline.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap red_4_spin1 {
+            get {
+                object obj = ResourceManager.GetObject("red_4_spin1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap red_5 {
             get {
                 object obj = ResourceManager.GetObject("red_5", resourceCulture);
@@ -556,6 +706,16 @@ namespace UnoSpinOnline.Properties {
         internal static System.Drawing.Bitmap red_5_spin {
             get {
                 object obj = ResourceManager.GetObject("red_5_spin", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap red_5_spin1 {
+            get {
+                object obj = ResourceManager.GetObject("red_5_spin1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -633,6 +793,186 @@ namespace UnoSpinOnline.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap spinner0 {
+            get {
+                object obj = ResourceManager.GetObject("spinner0", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap spinner1 {
+            get {
+                object obj = ResourceManager.GetObject("spinner1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap spinner10 {
+            get {
+                object obj = ResourceManager.GetObject("spinner10", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap spinner11 {
+            get {
+                object obj = ResourceManager.GetObject("spinner11", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap spinner12 {
+            get {
+                object obj = ResourceManager.GetObject("spinner12", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap spinner13 {
+            get {
+                object obj = ResourceManager.GetObject("spinner13", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap spinner14 {
+            get {
+                object obj = ResourceManager.GetObject("spinner14", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap spinner15 {
+            get {
+                object obj = ResourceManager.GetObject("spinner15", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap spinner16 {
+            get {
+                object obj = ResourceManager.GetObject("spinner16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap spinner17 {
+            get {
+                object obj = ResourceManager.GetObject("spinner17", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap spinner2 {
+            get {
+                object obj = ResourceManager.GetObject("spinner2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap spinner3 {
+            get {
+                object obj = ResourceManager.GetObject("spinner3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap spinner4 {
+            get {
+                object obj = ResourceManager.GetObject("spinner4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap spinner5 {
+            get {
+                object obj = ResourceManager.GetObject("spinner5", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap spinner6 {
+            get {
+                object obj = ResourceManager.GetObject("spinner6", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap spinner7 {
+            get {
+                object obj = ResourceManager.GetObject("spinner7", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap spinner8 {
+            get {
+                object obj = ResourceManager.GetObject("spinner8", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap spinner9 {
+            get {
+                object obj = ResourceManager.GetObject("spinner9", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap yellow_0 {
             get {
                 object obj = ResourceManager.GetObject("yellow_0", resourceCulture);
@@ -663,6 +1003,16 @@ namespace UnoSpinOnline.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap yellow_1_spin1 {
+            get {
+                object obj = ResourceManager.GetObject("yellow_1_spin1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap yellow_2 {
             get {
                 object obj = ResourceManager.GetObject("yellow_2", resourceCulture);
@@ -676,6 +1026,16 @@ namespace UnoSpinOnline.Properties {
         internal static System.Drawing.Bitmap yellow_2_spin {
             get {
                 object obj = ResourceManager.GetObject("yellow_2_spin", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap yellow_2_spin1 {
+            get {
+                object obj = ResourceManager.GetObject("yellow_2_spin1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -703,6 +1063,16 @@ namespace UnoSpinOnline.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap yellow_3_spin1 {
+            get {
+                object obj = ResourceManager.GetObject("yellow_3_spin1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap yellow_4 {
             get {
                 object obj = ResourceManager.GetObject("yellow_4", resourceCulture);
@@ -723,6 +1093,16 @@ namespace UnoSpinOnline.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap yellow_4_spin1 {
+            get {
+                object obj = ResourceManager.GetObject("yellow_4_spin1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap yellow_5 {
             get {
                 object obj = ResourceManager.GetObject("yellow_5", resourceCulture);
@@ -736,6 +1116,16 @@ namespace UnoSpinOnline.Properties {
         internal static System.Drawing.Bitmap yellow_5_spin {
             get {
                 object obj = ResourceManager.GetObject("yellow_5_spin", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap yellow_5_spin1 {
+            get {
+                object obj = ResourceManager.GetObject("yellow_5_spin1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

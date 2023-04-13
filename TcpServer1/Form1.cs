@@ -36,8 +36,9 @@ namespace TcpServer1
 
                 if (Encoding.UTF8.GetString(e.Data.Array).StartsWith("player number-"))
                 {
-                    server.Send(e.IpPort, $"player number-{clientIps.Count-1}-{Encoding.UTF8.GetString(e.Data.Array).Substring(14, Encoding.UTF8.GetString(e.Data.Array).Length-15)}");
-                } else
+                    server.Send(e.IpPort, $"player number-{clientIps.Count - 1}-{Encoding.UTF8.GetString(e.Data.Array).Substring(14, Encoding.UTF8.GetString(e.Data.Array).Length - 15)}");
+                }
+                else
                 {
                     foreach (string client in clientIps)
                     {
@@ -53,6 +54,10 @@ namespace TcpServer1
             {
                 textBox1.Text += $"Client Disconnected.{Environment.NewLine}";
                 clientIps.Remove(e.IpPort);
+                foreach (string client in clientIps)
+                {
+                    server.Send(client, "disconnect");
+                }
             });
         }
 
@@ -60,8 +65,15 @@ namespace TcpServer1
         {
             this.Invoke((MethodInvoker)delegate 
             {
-                textBox1.Text += $"Client Connected.{Environment.NewLine}";
-                clientIps.Add(e.IpPort);
+                if (clientIps.Count == 6)
+                {
+                    textBox1.Text += $"Lobby full.{Environment.NewLine}";
+                    server.Send(e.IpPort, "lobby-full");
+                } else
+                {
+                    textBox1.Text += $"Client Connected.{Environment.NewLine}";
+                    clientIps.Add(e.IpPort);
+                }
             });
         }
 

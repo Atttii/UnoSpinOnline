@@ -23,6 +23,10 @@ namespace UnoSpinOnline.GameFlow
         protected bool gameStarting;
         protected string color;
         protected int winner;
+        protected bool isSpinnerSpinning;
+        protected int spinnerResult;
+        protected int unoSpinWinner;
+        protected int highestCommunityCard;
 
 
         public GameLoop()
@@ -39,6 +43,10 @@ namespace UnoSpinOnline.GameFlow
             gameStarting = false;
             color = String.Empty;
             winner = -1;
+            isSpinnerSpinning = false;
+            spinnerResult = 1;
+            unoSpinWinner = -1;
+            highestCommunityCard = -1;
         }
 
         public GameLoop(byte[] message)
@@ -56,6 +64,10 @@ namespace UnoSpinOnline.GameFlow
             gameStarting = g.gameStarting;
             color = g.color;
             winner = g.winner;
+            isSpinnerSpinning = g.isSpinnerSpinning;
+            spinnerResult = g.spinnerResult;
+            unoSpinWinner = g.unoSpinWinner;
+            highestCommunityCard = g.highestCommunityCard;
         }
 
         public void Winner()
@@ -69,7 +81,6 @@ namespace UnoSpinOnline.GameFlow
             deck = cardFactory.generateDeck();
             deck.Shuffle();
             discardPile = new Deck();
-            discardPile.Add(new Card(7, "Blue", false));
             playerTurn = 0;
             clockwiseDirection = true;
             winner = -1;
@@ -94,11 +105,43 @@ namespace UnoSpinOnline.GameFlow
             }
         }
 
+        public int GetHighestCardValue()
+        {
+            return highestCommunityCard;
+        }
+
+        public void ResetHighestCardValue()
+        {
+            highestCommunityCard = -1;
+        }
+
+        public void SetHighestCardValue()
+        {
+            foreach (Player p in players)
+            {
+                if (p.GetHighestCardValue() > highestCommunityCard)
+                {
+                    highestCommunityCard = p.GetHighestCardValue();
+                }
+            }
+        }
+
+        public void SetSpinnerResult()
+        {
+            Random rand = new Random();
+            spinnerResult = rand.Next(1, 10);
+        }
+
+        public int GetSpinnerResult()
+        {
+            return spinnerResult;
+        }
+
         public void DealCards()
         {
             foreach (Player p in players)
             {
-                for (int i = 0; i < 1; i++)
+                for (int i = 0; i < 7; i++)
                 {
                     p.PickupCard(deck.Pop());
                 }
@@ -175,14 +218,22 @@ namespace UnoSpinOnline.GameFlow
             discardPile.Add(CurrentPlayer().PlayCard(i));
         }
 
+        public void PlayCardForPlayer(int player, int card)
+        {
+            //card playability is handled in the view
+            discardPile.Add(players[player].PlayCard(card));
+        }
+
         public Card PeekDiscardDeck()
         {
             return discardPile.Peek();
         }
 
-        public void PickupCard()
+        public Card PickupCard()
         {
-            CurrentPlayer().PickupCard(deck.Pop());
+            Card c = deck.Pop();
+            CurrentPlayer().PickupCard(c);
+            return c;
         }
 
 
@@ -212,6 +263,16 @@ namespace UnoSpinOnline.GameFlow
         public void SetWinner(int i)
         {
             winner = i;
+        }
+
+        public int GetUnoSpinWinner()
+        {
+            return unoSpinWinner;
+        }
+
+        public void SetUnoSpinWinner(int value)
+        {
+            unoSpinWinner = value;
         }
 
         public List<Player> GetPlayers()
@@ -252,6 +313,33 @@ namespace UnoSpinOnline.GameFlow
         public string GetCurrentColor()
         {
             return color;
+        }
+
+        public void SetSpinning(bool spin)
+        {
+            isSpinnerSpinning = spin;
+        }
+
+        public bool IsSpinning()
+        {
+            return isSpinnerSpinning;
+        }
+
+
+        public void TradeHands()
+        {
+            List<Card> temp = players[0].GetHand();
+
+            for (int i = 0; i < players.Count; i++)
+            {
+                if (i == 0)
+                {
+                    temp = players[i].SetHand(players[players.Count-1].GetHand());
+                } else
+                {
+                    temp = players[i].SetHand(temp);
+                }
+            }
         }
 
         public byte[] Serialize()

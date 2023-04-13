@@ -127,6 +127,21 @@
   <data name="green_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\green_2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="yellow_4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\yellow_4.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="spinner0" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\Spinner\spinner0.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="spinner17" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\Spinner\spinner17.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="red_pickup2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\red_pickup2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="blue_3_spin1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\blue_3_spin.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="red_5_spin" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\red_5_spin.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -142,8 +157,14 @@
   <data name="green_changedirection" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\green_changedirection.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="yellow_8" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\yellow_8.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="blue_4_spin" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\blue_4_spin.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="green_0" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\green_0.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="red_7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\red_7.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="yellow_5_spin" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\yellow_5_spin.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -154,8 +175,11 @@
   <data name="red_4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\red_4.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="blue_7" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\blue_7.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="blue_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\blue_3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="blue_4_spin1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\blue_4_spin.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="yellow_1_spin" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\yellow_1_spin.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -163,8 +187,8 @@
   <data name="blue_6" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\blue_6.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="green_7" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\green_7.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="spinner12" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\Spinner\spinner12.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="green_6" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\green_6.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -175,11 +199,17 @@
   <data name="red_1_spin" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\red_1_spin.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="yellow_9" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\yellow_9.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="green_5_spin1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\green_5_spin.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="blue_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\blue_3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="yellow_5_spin1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\yellow_5_spin.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="red_9" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\red_9.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="spinner6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\Spinner\spinner6.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="blue_3_spin" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\blue_3_spin.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -187,32 +217,41 @@
   <data name="yellow_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\yellow_1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="yellow_4" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\yellow_4.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="yellow_4_spin" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\yellow_4_spin.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="yellow_8" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\yellow_8.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="yellow_7" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\yellow_7.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="spinner5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\Spinner\spinner5.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="NA_pickup4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\NA_pickup4.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="blue_4_spin" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\blue_4_spin.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="red_4_spin1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\red_4_spin.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="red_8" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\red_8.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="green_2_spin1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\green_2_spin.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="green_pickup2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\green_pickup2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="spinner3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\Spinner\spinner3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="green_9" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\green_9.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="yellow_4_spin" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\yellow_4_spin.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="blue_1_spin1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\blue_1_spin.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="blue_9" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\blue_9.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="yellow_1_spin1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\yellow_1_spin.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="blue_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\blue_2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -229,11 +268,26 @@
   <data name="blue_changedirection" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\blue_changedirection.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="yellow_3_spin1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\yellow_3_spin.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="green_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\green_1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="green_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\green_3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="spinner9" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\Spinner\spinner9.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="yellow_skipturn" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\yellow_skipturn.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="red_3_spin" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\red_3_spin.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="spinner4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\Spinner\spinner4.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="blue_pickup2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\blue_pickup2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -244,6 +298,9 @@
   <data name="yellow_6" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\yellow_6.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="formBG" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\formBG.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="red_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\red_1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -253,20 +310,38 @@
   <data name="green_5" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\green_5.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="green_8" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\green_8.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="spinner2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\Spinner\spinner2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="red_3_spin" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\red_3_spin.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="red_2_spin1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\red_2_spin.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="red_8" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\red_8.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="spinner1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\Spinner\spinner1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="red_5" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\red_5.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="red_pickup2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\red_pickup2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="green_7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\green_7.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="spinner10" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\Spinner\spinner10.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="green_3_spin" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\green_3_spin.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="red_5_spin1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\red_5_spin.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="blue_7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\blue_7.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="spinner13" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\Spinner\spinner13.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="blue_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\blue_1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -289,11 +364,26 @@
   <data name="blue_0" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\blue_0.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="green_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\green_3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="green_1_spin" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\green_1_spin.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="spinner8" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\Spinner\spinner8.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="yellow_4_spin1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\yellow_4_spin.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="green_4_spin" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\green_4_spin.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="spinner7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\Spinner\spinner7.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="spinner16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\Spinner\spinner16.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="green_3_spin1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\green_3_spin.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="blue_1_spin" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\blue_1_spin.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -307,11 +397,23 @@
   <data name="yellow_5" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\yellow_5.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="blue_2_spin1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\blue_2_spin.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="yellow_2_spin1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\yellow_2_spin.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="red_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\red_2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="green_1_spin" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\green_1_spin.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="blue_9" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\blue_9.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="green_4_spin1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\green_4_spin.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="blue_5_spin1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\blue_5_spin.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="green_4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\green_4.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -319,8 +421,11 @@
   <data name="NA_changecolor" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\NA_changecolor.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="red_9" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\red_9.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="yellow_9" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\yellow_9.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="spinner15" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\Spinner\spinner15.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="red_6" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\red_6.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -328,19 +433,31 @@
   <data name="yellow_changedirection" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\yellow_changedirection.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="red_3_spin1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\red_3_spin.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="green_1_spin1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\green_1_spin.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="green_skipturn" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\green_skipturn.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="spinner11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\Spinner\spinner11.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="red_0" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\red_0.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="green_8" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\green_8.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="blue_5_spin" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\blue_5_spin.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="green_0" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\green_0.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="spinner14" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\Spinner\spinner14.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="red_7" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\red_7.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="back_of_card" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\back_of_card.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

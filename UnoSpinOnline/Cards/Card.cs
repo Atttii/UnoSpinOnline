@@ -54,6 +54,11 @@ namespace UnoSpinOnline.Cards
             }
         }
 
+        public bool GetSpin()
+        {
+            return spin;
+        }
+
         public string GetColor()
         {
             return color;

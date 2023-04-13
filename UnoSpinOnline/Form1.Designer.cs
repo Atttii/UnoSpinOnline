@@ -1,7 +1,7 @@
 ﻿
 namespace UnoSpinOnline
 {
-    partial class Form1
+    partial class Board1
     {
         /// <summary>
         /// Required designer variable.
@@ -35,8 +35,6 @@ namespace UnoSpinOnline
             this.playerPrompt = new System.Windows.Forms.Label();
             this.playCardButton = new System.Windows.Forms.Button();
             this.drawCardButton = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.Spinner = new System.Windows.Forms.Label();
             this.player6Label = new System.Windows.Forms.Label();
             this.player5Label = new System.Windows.Forms.Label();
             this.player4Label = new System.Windows.Forms.Label();
@@ -49,6 +47,7 @@ namespace UnoSpinOnline
             this.changeToYellowButton = new System.Windows.Forms.Button();
             this.changeToGreenButton = new System.Windows.Forms.Button();
             this.ColorIndicator = new System.Windows.Forms.Button();
+            this.SpinnerPictureBox = new System.Windows.Forms.PictureBox();
             this.player2PictureBox = new System.Windows.Forms.PictureBox();
             this.player3PictureBox = new System.Windows.Forms.PictureBox();
             this.player4PictureBox = new System.Windows.Forms.PictureBox();
@@ -65,7 +64,25 @@ namespace UnoSpinOnline
             this.card9 = new System.Windows.Forms.PictureBox();
             this.card1 = new System.Windows.Forms.PictureBox();
             this.playerHand1 = new System.Windows.Forms.PictureBox();
-            this.panel1.SuspendLayout();
+            this.SpinButton = new System.Windows.Forms.Button();
+            this.ChooseButton = new System.Windows.Forms.Button();
+            this.UnoSpinButton = new System.Windows.Forms.Button();
+            this.playerHand2 = new System.Windows.Forms.PictureBox();
+            this.card10 = new System.Windows.Forms.PictureBox();
+            this.card11 = new System.Windows.Forms.PictureBox();
+            this.card12 = new System.Windows.Forms.PictureBox();
+            this.card13 = new System.Windows.Forms.PictureBox();
+            this.card14 = new System.Windows.Forms.PictureBox();
+            this.card15 = new System.Windows.Forms.PictureBox();
+            this.card16 = new System.Windows.Forms.PictureBox();
+            this.card17 = new System.Windows.Forms.PictureBox();
+            this.card18 = new System.Windows.Forms.PictureBox();
+            this.player2CardCount = new System.Windows.Forms.Label();
+            this.player4CardCount = new System.Windows.Forms.Label();
+            this.player5CardCount = new System.Windows.Forms.Label();
+            this.player6CardCount = new System.Windows.Forms.Label();
+            this.player3CardCount = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.SpinnerPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.player2PictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.player3PictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.player4PictureBox)).BeginInit();
@@ -82,151 +99,176 @@ namespace UnoSpinOnline
             ((System.ComponentModel.ISupportInitialize)(this.card9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.card1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.playerHand1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.playerHand2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.card10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.card11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.card12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.card13)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.card14)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.card15)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.card16)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.card17)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.card18)).BeginInit();
             this.SuspendLayout();
             // 
             // player1Label
             // 
             this.player1Label.AutoSize = true;
-            this.player1Label.Location = new System.Drawing.Point(126, 466);
+            this.player1Label.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.player1Label.Font = new System.Drawing.Font("Showcard Gothic", 12F, System.Drawing.FontStyle.Underline);
+            this.player1Label.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.player1Label.Location = new System.Drawing.Point(113, 470);
             this.player1Label.Name = "player1Label";
-            this.player1Label.Size = new System.Drawing.Size(45, 13);
+            this.player1Label.Size = new System.Drawing.Size(80, 20);
             this.player1Label.TabIndex = 0;
             this.player1Label.Text = "Player 1";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(33, 22);
+            this.label2.BackColor = System.Drawing.Color.Black;
+            this.label2.Font = new System.Drawing.Font("Showcard Gothic", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label2.Location = new System.Drawing.Point(8, 15);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(63, 13);
+            this.label2.Size = new System.Drawing.Size(116, 20);
             this.label2.TabIndex = 1;
             this.label2.Text = "Discard Pile";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // dealCardsButton
             // 
-            this.dealCardsButton.Location = new System.Drawing.Point(1201, -2);
+            this.dealCardsButton.BackColor = System.Drawing.Color.Yellow;
+            this.dealCardsButton.Font = new System.Drawing.Font("Showcard Gothic", 12F, System.Drawing.FontStyle.Underline);
+            this.dealCardsButton.Location = new System.Drawing.Point(1201, 12);
             this.dealCardsButton.Name = "dealCardsButton";
-            this.dealCardsButton.Size = new System.Drawing.Size(75, 23);
+            this.dealCardsButton.Size = new System.Drawing.Size(75, 34);
             this.dealCardsButton.TabIndex = 3;
             this.dealCardsButton.Text = "Ready";
             this.dealCardsButton.TextAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.dealCardsButton.UseVisualStyleBackColor = true;
+            this.dealCardsButton.UseVisualStyleBackColor = false;
             this.dealCardsButton.Click += new System.EventHandler(this.dealButton_Click);
             // 
             // playerPrompt
             // 
             this.playerPrompt.AutoSize = true;
-            this.playerPrompt.Location = new System.Drawing.Point(12, 259);
+            this.playerPrompt.BackColor = System.Drawing.Color.Black;
+            this.playerPrompt.Font = new System.Drawing.Font("Showcard Gothic", 12F, System.Drawing.FontStyle.Underline);
+            this.playerPrompt.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.playerPrompt.Location = new System.Drawing.Point(12, 277);
+            this.playerPrompt.MaximumSize = new System.Drawing.Size(258, 50);
             this.playerPrompt.Name = "playerPrompt";
-            this.playerPrompt.Size = new System.Drawing.Size(0, 13);
+            this.playerPrompt.Size = new System.Drawing.Size(0, 20);
             this.playerPrompt.TabIndex = 4;
             // 
             // playCardButton
             // 
+            this.playCardButton.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.playCardButton.Font = new System.Drawing.Font("Showcard Gothic", 12F, System.Drawing.FontStyle.Underline);
             this.playCardButton.Location = new System.Drawing.Point(12, 516);
             this.playCardButton.Name = "playCardButton";
-            this.playCardButton.Size = new System.Drawing.Size(75, 23);
+            this.playCardButton.Size = new System.Drawing.Size(84, 48);
             this.playCardButton.TabIndex = 15;
             this.playCardButton.Text = "Play Card";
-            this.playCardButton.UseVisualStyleBackColor = true;
+            this.playCardButton.UseVisualStyleBackColor = false;
             this.playCardButton.Click += new System.EventHandler(this.playCardButton_Click);
             // 
             // drawCardButton
             // 
-            this.drawCardButton.Location = new System.Drawing.Point(21, 194);
+            this.drawCardButton.Font = new System.Drawing.Font("Showcard Gothic", 12F, System.Drawing.FontStyle.Underline);
+            this.drawCardButton.Location = new System.Drawing.Point(15, 194);
             this.drawCardButton.Name = "drawCardButton";
-            this.drawCardButton.Size = new System.Drawing.Size(75, 23);
+            this.drawCardButton.Size = new System.Drawing.Size(100, 32);
             this.drawCardButton.TabIndex = 16;
             this.drawCardButton.Text = "Draw Card";
             this.drawCardButton.UseVisualStyleBackColor = true;
             this.drawCardButton.Click += new System.EventHandler(this.drawCardButton_Click);
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel1.Controls.Add(this.Spinner);
-            this.panel1.Location = new System.Drawing.Point(347, 49);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(444, 370);
-            this.panel1.TabIndex = 17;
-            // 
-            // Spinner
-            // 
-            this.Spinner.AutoSize = true;
-            this.Spinner.Location = new System.Drawing.Point(190, 182);
-            this.Spinner.Name = "Spinner";
-            this.Spinner.Size = new System.Drawing.Size(43, 13);
-            this.Spinner.TabIndex = 0;
-            this.Spinner.Text = "Spinner";
-            // 
             // player6Label
             // 
             this.player6Label.AutoSize = true;
-            this.player6Label.Location = new System.Drawing.Point(1026, 396);
+            this.player6Label.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.player6Label.Font = new System.Drawing.Font("Showcard Gothic", 12F, System.Drawing.FontStyle.Underline);
+            this.player6Label.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.player6Label.Location = new System.Drawing.Point(1067, 408);
             this.player6Label.Name = "player6Label";
-            this.player6Label.Size = new System.Drawing.Size(49, 13);
+            this.player6Label.Size = new System.Drawing.Size(82, 20);
             this.player6Label.TabIndex = 23;
             this.player6Label.Text = "PLayer 6";
             // 
             // player5Label
             // 
             this.player5Label.AutoSize = true;
-            this.player5Label.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.player5Label.Location = new System.Drawing.Point(923, 396);
+            this.player5Label.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.player5Label.Font = new System.Drawing.Font("Showcard Gothic", 12F, System.Drawing.FontStyle.Underline);
+            this.player5Label.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.player5Label.Location = new System.Drawing.Point(957, 408);
             this.player5Label.Name = "player5Label";
-            this.player5Label.Size = new System.Drawing.Size(45, 13);
+            this.player5Label.Size = new System.Drawing.Size(81, 20);
             this.player5Label.TabIndex = 24;
             this.player5Label.Text = "Player 5";
             // 
             // player4Label
             // 
             this.player4Label.AutoSize = true;
-            this.player4Label.Location = new System.Drawing.Point(1087, 204);
+            this.player4Label.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.player4Label.Font = new System.Drawing.Font("Showcard Gothic", 12F, System.Drawing.FontStyle.Underline);
+            this.player4Label.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.player4Label.Location = new System.Drawing.Point(846, 408);
             this.player4Label.Name = "player4Label";
-            this.player4Label.Size = new System.Drawing.Size(45, 13);
+            this.player4Label.Size = new System.Drawing.Size(82, 20);
             this.player4Label.TabIndex = 25;
             this.player4Label.Text = "Player 4";
             // 
             // player3Label
             // 
             this.player3Label.AutoSize = true;
-            this.player3Label.Location = new System.Drawing.Point(972, 204);
+            this.player3Label.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.player3Label.Font = new System.Drawing.Font("Showcard Gothic", 12F, System.Drawing.FontStyle.Underline);
+            this.player3Label.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.player3Label.Location = new System.Drawing.Point(957, 194);
             this.player3Label.Name = "player3Label";
-            this.player3Label.Size = new System.Drawing.Size(45, 13);
+            this.player3Label.Size = new System.Drawing.Size(81, 20);
             this.player3Label.TabIndex = 26;
             this.player3Label.Text = "Player 3";
             // 
             // player2Label
             // 
             this.player2Label.AutoSize = true;
-            this.player2Label.Location = new System.Drawing.Point(867, 204);
+            this.player2Label.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.player2Label.Font = new System.Drawing.Font("Showcard Gothic", 12F, System.Drawing.FontStyle.Underline);
+            this.player2Label.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.player2Label.Location = new System.Drawing.Point(846, 194);
             this.player2Label.Name = "player2Label";
-            this.player2Label.Size = new System.Drawing.Size(45, 13);
+            this.player2Label.Size = new System.Drawing.Size(80, 20);
             this.player2Label.TabIndex = 27;
             this.player2Label.Text = "Player 2";
             // 
             // AddPlayerButton
             // 
-            this.AddPlayerButton.Location = new System.Drawing.Point(1201, 76);
+            this.AddPlayerButton.Font = new System.Drawing.Font("Showcard Gothic", 12F, System.Drawing.FontStyle.Underline);
+            this.AddPlayerButton.Location = new System.Drawing.Point(1201, 49);
             this.AddPlayerButton.Name = "AddPlayerButton";
-            this.AddPlayerButton.Size = new System.Drawing.Size(75, 23);
+            this.AddPlayerButton.Size = new System.Drawing.Size(75, 32);
             this.AddPlayerButton.TabIndex = 28;
-            this.AddPlayerButton.Text = "Join Lobby";
+            this.AddPlayerButton.Text = "Join";
             this.AddPlayerButton.UseVisualStyleBackColor = true;
             this.AddPlayerButton.Click += new System.EventHandler(this.AddPlayerButton_Click);
             // 
             // addPlayerNameTextBox
             // 
-            this.addPlayerNameTextBox.Location = new System.Drawing.Point(1189, 105);
+            this.addPlayerNameTextBox.Font = new System.Drawing.Font("Showcard Gothic", 12F, System.Drawing.FontStyle.Underline);
+            this.addPlayerNameTextBox.Location = new System.Drawing.Point(1071, 90);
             this.addPlayerNameTextBox.Name = "addPlayerNameTextBox";
-            this.addPlayerNameTextBox.Size = new System.Drawing.Size(100, 20);
+            this.addPlayerNameTextBox.Size = new System.Drawing.Size(226, 27);
             this.addPlayerNameTextBox.TabIndex = 30;
             // 
             // changeToRedButton
             // 
-            this.changeToRedButton.Location = new System.Drawing.Point(143, 76);
+            this.changeToRedButton.Font = new System.Drawing.Font("Showcard Gothic", 12F, System.Drawing.FontStyle.Underline);
+            this.changeToRedButton.Location = new System.Drawing.Point(143, 52);
             this.changeToRedButton.Name = "changeToRedButton";
-            this.changeToRedButton.Size = new System.Drawing.Size(75, 23);
+            this.changeToRedButton.Size = new System.Drawing.Size(103, 29);
             this.changeToRedButton.TabIndex = 31;
             this.changeToRedButton.Text = "Red";
             this.changeToRedButton.UseVisualStyleBackColor = true;
@@ -234,9 +276,10 @@ namespace UnoSpinOnline
             // 
             // changeToBlueButton
             // 
-            this.changeToBlueButton.Location = new System.Drawing.Point(143, 107);
+            this.changeToBlueButton.Font = new System.Drawing.Font("Showcard Gothic", 12F, System.Drawing.FontStyle.Underline);
+            this.changeToBlueButton.Location = new System.Drawing.Point(143, 87);
             this.changeToBlueButton.Name = "changeToBlueButton";
-            this.changeToBlueButton.Size = new System.Drawing.Size(75, 23);
+            this.changeToBlueButton.Size = new System.Drawing.Size(103, 30);
             this.changeToBlueButton.TabIndex = 32;
             this.changeToBlueButton.Text = "Blue";
             this.changeToBlueButton.UseVisualStyleBackColor = true;
@@ -244,9 +287,10 @@ namespace UnoSpinOnline
             // 
             // changeToYellowButton
             // 
-            this.changeToYellowButton.Location = new System.Drawing.Point(143, 136);
+            this.changeToYellowButton.Font = new System.Drawing.Font("Showcard Gothic", 12F, System.Drawing.FontStyle.Underline);
+            this.changeToYellowButton.Location = new System.Drawing.Point(143, 123);
             this.changeToYellowButton.Name = "changeToYellowButton";
-            this.changeToYellowButton.Size = new System.Drawing.Size(75, 23);
+            this.changeToYellowButton.Size = new System.Drawing.Size(103, 29);
             this.changeToYellowButton.TabIndex = 33;
             this.changeToYellowButton.Text = "Yellow";
             this.changeToYellowButton.UseVisualStyleBackColor = true;
@@ -254,9 +298,10 @@ namespace UnoSpinOnline
             // 
             // changeToGreenButton
             // 
-            this.changeToGreenButton.Location = new System.Drawing.Point(143, 165);
+            this.changeToGreenButton.Font = new System.Drawing.Font("Showcard Gothic", 12F, System.Drawing.FontStyle.Underline);
+            this.changeToGreenButton.Location = new System.Drawing.Point(143, 158);
             this.changeToGreenButton.Name = "changeToGreenButton";
-            this.changeToGreenButton.Size = new System.Drawing.Size(75, 23);
+            this.changeToGreenButton.Size = new System.Drawing.Size(103, 30);
             this.changeToGreenButton.TabIndex = 34;
             this.changeToGreenButton.Text = "Green";
             this.changeToGreenButton.UseVisualStyleBackColor = true;
@@ -265,18 +310,30 @@ namespace UnoSpinOnline
             // ColorIndicator
             // 
             this.ColorIndicator.BackColor = System.Drawing.Color.Yellow;
-            this.ColorIndicator.Location = new System.Drawing.Point(143, 47);
+            this.ColorIndicator.Font = new System.Drawing.Font("Showcard Gothic", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ColorIndicator.Location = new System.Drawing.Point(143, 15);
             this.ColorIndicator.Name = "ColorIndicator";
-            this.ColorIndicator.Size = new System.Drawing.Size(75, 23);
+            this.ColorIndicator.Size = new System.Drawing.Size(103, 31);
             this.ColorIndicator.TabIndex = 35;
             this.ColorIndicator.Text = "Color";
             this.ColorIndicator.UseVisualStyleBackColor = false;
             this.ColorIndicator.Click += new System.EventHandler(this.ColorIndicator_Click);
             // 
+            // SpinnerPictureBox
+            // 
+            this.SpinnerPictureBox.Image = global::UnoSpinOnline.Properties.Resources.spinner13;
+            this.SpinnerPictureBox.Location = new System.Drawing.Point(278, 49);
+            this.SpinnerPictureBox.Name = "SpinnerPictureBox";
+            this.SpinnerPictureBox.Size = new System.Drawing.Size(499, 430);
+            this.SpinnerPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.SpinnerPictureBox.TabIndex = 36;
+            this.SpinnerPictureBox.TabStop = false;
+            // 
             // player2PictureBox
             // 
             this.player2PictureBox.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.player2PictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.player2PictureBox.Image = global::UnoSpinOnline.Properties.Resources.back_of_card;
             this.player2PictureBox.Location = new System.Drawing.Point(836, 49);
             this.player2PictureBox.Name = "player2PictureBox";
             this.player2PictureBox.Size = new System.Drawing.Size(103, 139);
@@ -288,6 +345,7 @@ namespace UnoSpinOnline
             // 
             this.player3PictureBox.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.player3PictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.player3PictureBox.Image = global::UnoSpinOnline.Properties.Resources.back_of_card;
             this.player3PictureBox.Location = new System.Drawing.Point(945, 49);
             this.player3PictureBox.Name = "player3PictureBox";
             this.player3PictureBox.Size = new System.Drawing.Size(103, 139);
@@ -299,7 +357,8 @@ namespace UnoSpinOnline
             // 
             this.player4PictureBox.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.player4PictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.player4PictureBox.Location = new System.Drawing.Point(1054, 49);
+            this.player4PictureBox.Image = global::UnoSpinOnline.Properties.Resources.back_of_card;
+            this.player4PictureBox.Location = new System.Drawing.Point(836, 266);
             this.player4PictureBox.Name = "player4PictureBox";
             this.player4PictureBox.Size = new System.Drawing.Size(103, 139);
             this.player4PictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -310,7 +369,8 @@ namespace UnoSpinOnline
             // 
             this.player6PictureBox.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.player6PictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.player6PictureBox.Location = new System.Drawing.Point(1001, 240);
+            this.player6PictureBox.Image = global::UnoSpinOnline.Properties.Resources.back_of_card;
+            this.player6PictureBox.Location = new System.Drawing.Point(1054, 266);
             this.player6PictureBox.Name = "player6PictureBox";
             this.player6PictureBox.Size = new System.Drawing.Size(103, 139);
             this.player6PictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -321,7 +381,8 @@ namespace UnoSpinOnline
             // 
             this.player5PictureBox.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.player5PictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.player5PictureBox.Location = new System.Drawing.Point(892, 240);
+            this.player5PictureBox.Image = global::UnoSpinOnline.Properties.Resources.back_of_card;
+            this.player5PictureBox.Location = new System.Drawing.Point(945, 266);
             this.player5PictureBox.Name = "player5PictureBox";
             this.player5PictureBox.Size = new System.Drawing.Size(103, 139);
             this.player5PictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -332,6 +393,7 @@ namespace UnoSpinOnline
             // 
             this.discardPile.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.discardPile.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.discardPile.Image = global::UnoSpinOnline.Properties.Resources.back_of_card;
             this.discardPile.Location = new System.Drawing.Point(12, 49);
             this.discardPile.Name = "discardPile";
             this.discardPile.Size = new System.Drawing.Size(103, 139);
@@ -467,7 +529,7 @@ namespace UnoSpinOnline
             // 
             // playerHand1
             // 
-            this.playerHand1.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.playerHand1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.playerHand1.ImageLocation = "";
             this.playerHand1.InitialImage = null;
             this.playerHand1.Location = new System.Drawing.Point(102, 502);
@@ -477,12 +539,265 @@ namespace UnoSpinOnline
             this.playerHand1.TabIndex = 2;
             this.playerHand1.TabStop = false;
             // 
-            // Form1
+            // SpinButton
+            // 
+            this.SpinButton.Font = new System.Drawing.Font("Showcard Gothic", 12F, System.Drawing.FontStyle.Underline);
+            this.SpinButton.Location = new System.Drawing.Point(186, 408);
+            this.SpinButton.Name = "SpinButton";
+            this.SpinButton.Size = new System.Drawing.Size(75, 31);
+            this.SpinButton.TabIndex = 37;
+            this.SpinButton.Text = "Spin";
+            this.SpinButton.UseVisualStyleBackColor = true;
+            this.SpinButton.Click += new System.EventHandler(this.SpinButton_Click);
+            // 
+            // ChooseButton
+            // 
+            this.ChooseButton.Font = new System.Drawing.Font("Showcard Gothic", 12F, System.Drawing.FontStyle.Underline);
+            this.ChooseButton.Location = new System.Drawing.Point(15, 232);
+            this.ChooseButton.Name = "ChooseButton";
+            this.ChooseButton.Size = new System.Drawing.Size(100, 32);
+            this.ChooseButton.TabIndex = 38;
+            this.ChooseButton.Text = "Choose";
+            this.ChooseButton.UseVisualStyleBackColor = true;
+            this.ChooseButton.Click += new System.EventHandler(this.ChooseButton_Click);
+            // 
+            // UnoSpinButton
+            // 
+            this.UnoSpinButton.BackColor = System.Drawing.Color.OrangeRed;
+            this.UnoSpinButton.Font = new System.Drawing.Font("Showcard Gothic", 12F, System.Drawing.FontStyle.Underline);
+            this.UnoSpinButton.Location = new System.Drawing.Point(117, 355);
+            this.UnoSpinButton.Name = "UnoSpinButton";
+            this.UnoSpinButton.Size = new System.Drawing.Size(155, 94);
+            this.UnoSpinButton.TabIndex = 39;
+            this.UnoSpinButton.Text = "Uno Spin!";
+            this.UnoSpinButton.UseVisualStyleBackColor = false;
+            this.UnoSpinButton.Click += new System.EventHandler(this.UnoSpinButton_Click);
+            // 
+            // playerHand2
+            // 
+            this.playerHand2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.playerHand2.ImageLocation = "";
+            this.playerHand2.InitialImage = null;
+            this.playerHand2.Location = new System.Drawing.Point(102, 661);
+            this.playerHand2.Name = "playerHand2";
+            this.playerHand2.Size = new System.Drawing.Size(1030, 154);
+            this.playerHand2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.playerHand2.TabIndex = 40;
+            this.playerHand2.TabStop = false;
+            // 
+            // card10
+            // 
+            this.card10.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.card10.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.card10.Location = new System.Drawing.Point(129, 661);
+            this.card10.Name = "card10";
+            this.card10.Size = new System.Drawing.Size(103, 139);
+            this.card10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.card10.TabIndex = 41;
+            this.card10.TabStop = false;
+            this.card10.Click += new System.EventHandler(this.card10_Click);
+            this.card10.MouseEnter += new System.EventHandler(this.card10_MouseEnter);
+            this.card10.MouseLeave += new System.EventHandler(this.allCards_MouseLeave);
+            // 
+            // card11
+            // 
+            this.card11.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.card11.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.card11.Location = new System.Drawing.Point(238, 661);
+            this.card11.Name = "card11";
+            this.card11.Size = new System.Drawing.Size(103, 139);
+            this.card11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.card11.TabIndex = 42;
+            this.card11.TabStop = false;
+            this.card11.Click += new System.EventHandler(this.card11_Click);
+            this.card11.MouseEnter += new System.EventHandler(this.card11_MouseEnter);
+            this.card11.MouseLeave += new System.EventHandler(this.allCards_MouseLeave);
+            // 
+            // card12
+            // 
+            this.card12.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.card12.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.card12.Location = new System.Drawing.Point(347, 661);
+            this.card12.Name = "card12";
+            this.card12.Size = new System.Drawing.Size(103, 139);
+            this.card12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.card12.TabIndex = 43;
+            this.card12.TabStop = false;
+            this.card12.Click += new System.EventHandler(this.card12_Click);
+            this.card12.MouseEnter += new System.EventHandler(this.card12_MouseEnter);
+            this.card12.MouseLeave += new System.EventHandler(this.allCards_MouseLeave);
+            // 
+            // card13
+            // 
+            this.card13.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.card13.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.card13.Location = new System.Drawing.Point(456, 661);
+            this.card13.Name = "card13";
+            this.card13.Size = new System.Drawing.Size(103, 139);
+            this.card13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.card13.TabIndex = 44;
+            this.card13.TabStop = false;
+            this.card13.Click += new System.EventHandler(this.card13_Click);
+            this.card13.MouseEnter += new System.EventHandler(this.card13_MouseEnter);
+            this.card13.MouseLeave += new System.EventHandler(this.allCards_MouseLeave);
+            // 
+            // card14
+            // 
+            this.card14.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.card14.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.card14.Location = new System.Drawing.Point(565, 661);
+            this.card14.Name = "card14";
+            this.card14.Size = new System.Drawing.Size(103, 139);
+            this.card14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.card14.TabIndex = 45;
+            this.card14.TabStop = false;
+            this.card14.Click += new System.EventHandler(this.card14_Click);
+            this.card14.MouseEnter += new System.EventHandler(this.card14_MouseEnter);
+            this.card14.MouseLeave += new System.EventHandler(this.allCards_MouseLeave);
+            // 
+            // card15
+            // 
+            this.card15.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.card15.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.card15.Location = new System.Drawing.Point(674, 661);
+            this.card15.Name = "card15";
+            this.card15.Size = new System.Drawing.Size(103, 139);
+            this.card15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.card15.TabIndex = 46;
+            this.card15.TabStop = false;
+            this.card15.Click += new System.EventHandler(this.card15_Click);
+            this.card15.MouseEnter += new System.EventHandler(this.card15_MouseEnter);
+            this.card15.MouseLeave += new System.EventHandler(this.allCards_MouseLeave);
+            // 
+            // card16
+            // 
+            this.card16.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.card16.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.card16.Location = new System.Drawing.Point(783, 661);
+            this.card16.Name = "card16";
+            this.card16.Size = new System.Drawing.Size(103, 139);
+            this.card16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.card16.TabIndex = 47;
+            this.card16.TabStop = false;
+            this.card16.Click += new System.EventHandler(this.card16_Click);
+            this.card16.MouseEnter += new System.EventHandler(this.card16_MouseEnter);
+            this.card16.MouseLeave += new System.EventHandler(this.allCards_MouseLeave);
+            // 
+            // card17
+            // 
+            this.card17.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.card17.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.card17.Location = new System.Drawing.Point(892, 661);
+            this.card17.Name = "card17";
+            this.card17.Size = new System.Drawing.Size(103, 139);
+            this.card17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.card17.TabIndex = 48;
+            this.card17.TabStop = false;
+            this.card17.Click += new System.EventHandler(this.card17_Click);
+            this.card17.MouseEnter += new System.EventHandler(this.card17_MouseEnter);
+            this.card17.MouseLeave += new System.EventHandler(this.allCards_MouseLeave);
+            // 
+            // card18
+            // 
+            this.card18.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.card18.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.card18.Location = new System.Drawing.Point(1001, 661);
+            this.card18.Name = "card18";
+            this.card18.Size = new System.Drawing.Size(103, 139);
+            this.card18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.card18.TabIndex = 49;
+            this.card18.TabStop = false;
+            this.card18.Click += new System.EventHandler(this.card18_Click);
+            this.card18.MouseEnter += new System.EventHandler(this.card18_MouseEnter);
+            this.card18.MouseLeave += new System.EventHandler(this.allCards_MouseLeave);
+            // 
+            // player2CardCount
+            // 
+            this.player2CardCount.AutoSize = true;
+            this.player2CardCount.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.player2CardCount.Font = new System.Drawing.Font("Showcard Gothic", 12F, System.Drawing.FontStyle.Underline);
+            this.player2CardCount.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.player2CardCount.Location = new System.Drawing.Point(853, 223);
+            this.player2CardCount.Name = "player2CardCount";
+            this.player2CardCount.Size = new System.Drawing.Size(73, 20);
+            this.player2CardCount.TabIndex = 50;
+            this.player2CardCount.Text = "7 Cards";
+            this.player2CardCount.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // player4CardCount
+            // 
+            this.player4CardCount.AutoSize = true;
+            this.player4CardCount.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.player4CardCount.Font = new System.Drawing.Font("Showcard Gothic", 12F, System.Drawing.FontStyle.Underline);
+            this.player4CardCount.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.player4CardCount.Location = new System.Drawing.Point(855, 438);
+            this.player4CardCount.Name = "player4CardCount";
+            this.player4CardCount.Size = new System.Drawing.Size(73, 20);
+            this.player4CardCount.TabIndex = 51;
+            this.player4CardCount.Text = "7 Cards";
+            // 
+            // player5CardCount
+            // 
+            this.player5CardCount.AutoSize = true;
+            this.player5CardCount.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.player5CardCount.Font = new System.Drawing.Font("Showcard Gothic", 12F, System.Drawing.FontStyle.Underline);
+            this.player5CardCount.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.player5CardCount.Location = new System.Drawing.Point(965, 438);
+            this.player5CardCount.Name = "player5CardCount";
+            this.player5CardCount.Size = new System.Drawing.Size(73, 20);
+            this.player5CardCount.TabIndex = 52;
+            this.player5CardCount.Text = "7 Cards";
+            // 
+            // player6CardCount
+            // 
+            this.player6CardCount.AutoSize = true;
+            this.player6CardCount.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.player6CardCount.Font = new System.Drawing.Font("Showcard Gothic", 12F, System.Drawing.FontStyle.Underline);
+            this.player6CardCount.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.player6CardCount.Location = new System.Drawing.Point(1076, 438);
+            this.player6CardCount.Name = "player6CardCount";
+            this.player6CardCount.Size = new System.Drawing.Size(73, 20);
+            this.player6CardCount.TabIndex = 53;
+            this.player6CardCount.Text = "7 Cards";
+            this.player6CardCount.Click += new System.EventHandler(this.player6CardCount_Click);
+            // 
+            // player3CardCount
+            // 
+            this.player3CardCount.AutoSize = true;
+            this.player3CardCount.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.player3CardCount.Font = new System.Drawing.Font("Showcard Gothic", 12F, System.Drawing.FontStyle.Underline);
+            this.player3CardCount.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.player3CardCount.Location = new System.Drawing.Point(965, 223);
+            this.player3CardCount.Name = "player3CardCount";
+            this.player3CardCount.Size = new System.Drawing.Size(73, 20);
+            this.player3CardCount.TabIndex = 54;
+            this.player3CardCount.Text = "7 Cards";
+            // 
+            // Board1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.ClientSize = new System.Drawing.Size(1351, 719);
+            this.BackgroundImage = global::UnoSpinOnline.Properties.Resources.formBG;
+            this.ClientSize = new System.Drawing.Size(1318, 841);
+            this.Controls.Add(this.player3CardCount);
+            this.Controls.Add(this.player6CardCount);
+            this.Controls.Add(this.player5CardCount);
+            this.Controls.Add(this.player4CardCount);
+            this.Controls.Add(this.player2CardCount);
+            this.Controls.Add(this.card18);
+            this.Controls.Add(this.card17);
+            this.Controls.Add(this.card16);
+            this.Controls.Add(this.card15);
+            this.Controls.Add(this.card14);
+            this.Controls.Add(this.card13);
+            this.Controls.Add(this.card12);
+            this.Controls.Add(this.card11);
+            this.Controls.Add(this.card10);
+            this.Controls.Add(this.playerHand2);
+            this.Controls.Add(this.ChooseButton);
+            this.Controls.Add(this.SpinButton);
+            this.Controls.Add(this.SpinnerPictureBox);
             this.Controls.Add(this.ColorIndicator);
             this.Controls.Add(this.changeToGreenButton);
             this.Controls.Add(this.changeToYellowButton);
@@ -500,7 +815,6 @@ namespace UnoSpinOnline
             this.Controls.Add(this.player4PictureBox);
             this.Controls.Add(this.player6PictureBox);
             this.Controls.Add(this.player5PictureBox);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.drawCardButton);
             this.Controls.Add(this.playCardButton);
             this.Controls.Add(this.discardPile);
@@ -518,11 +832,11 @@ namespace UnoSpinOnline
             this.Controls.Add(this.playerHand1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.player1Label);
-            this.Name = "Form1";
+            this.Controls.Add(this.UnoSpinButton);
+            this.Name = "Board1";
             this.Text = "Board";
             this.Load += new System.EventHandler(this.Form1_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SpinnerPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.player2PictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.player3PictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.player4PictureBox)).EndInit();
@@ -539,6 +853,16 @@ namespace UnoSpinOnline
             ((System.ComponentModel.ISupportInitialize)(this.card9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.card1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.playerHand1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.playerHand2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.card10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.card11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.card12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.card13)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.card14)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.card15)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.card16)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.card17)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.card18)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -562,8 +886,6 @@ namespace UnoSpinOnline
         private System.Windows.Forms.PictureBox discardPile;
         private System.Windows.Forms.Button playCardButton;
         private System.Windows.Forms.Button drawCardButton;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label Spinner;
         private System.Windows.Forms.PictureBox player5PictureBox;
         private System.Windows.Forms.PictureBox player6PictureBox;
         private System.Windows.Forms.PictureBox player4PictureBox;
@@ -581,6 +903,25 @@ namespace UnoSpinOnline
         private System.Windows.Forms.Button changeToYellowButton;
         private System.Windows.Forms.Button changeToGreenButton;
         private System.Windows.Forms.Button ColorIndicator;
+        private System.Windows.Forms.PictureBox SpinnerPictureBox;
+        private System.Windows.Forms.Button SpinButton;
+        private System.Windows.Forms.Button ChooseButton;
+        private System.Windows.Forms.Button UnoSpinButton;
+        private System.Windows.Forms.PictureBox playerHand2;
+        private System.Windows.Forms.PictureBox card10;
+        private System.Windows.Forms.PictureBox card11;
+        private System.Windows.Forms.PictureBox card12;
+        private System.Windows.Forms.PictureBox card13;
+        private System.Windows.Forms.PictureBox card14;
+        private System.Windows.Forms.PictureBox card15;
+        private System.Windows.Forms.PictureBox card16;
+        private System.Windows.Forms.PictureBox card17;
+        private System.Windows.Forms.PictureBox card18;
+        private System.Windows.Forms.Label player2CardCount;
+        private System.Windows.Forms.Label player4CardCount;
+        private System.Windows.Forms.Label player5CardCount;
+        private System.Windows.Forms.Label player6CardCount;
+        private System.Windows.Forms.Label player3CardCount;
     }
 }
 

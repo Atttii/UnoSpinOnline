@@ -33,9 +33,55 @@ namespace UnoSpinOnline.GameFlow
             hand.Add(c);
         }
 
+        public int GetHandSize()
+        {
+            return hand.Count;
+        }
+
         public Card GetCard(int i)
         {
             return hand[i];
+        }
+
+        public int GetHighestCardValue()
+        {
+            int highestValue = -1;
+
+            foreach (Card c in hand)
+            {
+                if (c.GetValue() > highestValue && c.GetValue() < 10)
+                {
+                    highestValue = c.GetValue();
+                }
+            }
+
+            return highestValue;
+        }
+
+        public Card GetHighestCard()
+        {
+            if (GetHighestCardIndex() != -1)
+            {
+                return hand[GetHighestCardIndex()];
+            } else
+            {
+                return null;
+            }
+        }
+
+        public int GetHighestCardIndex()
+        {
+            int i;
+            int highestCardValue = GetHighestCardValue();
+
+            for (i=0;  i < hand.Count; i++)
+            {
+                if (hand[i].GetValue()==highestCardValue)
+                {
+                    return i;
+                }
+            }
+            return -1;
         }
 
         public Card PlayCard(int i)
@@ -43,6 +89,18 @@ namespace UnoSpinOnline.GameFlow
             Card discard = hand[i];
             hand.RemoveAt(i);
             return discard;
+        }
+
+        public List<Card> GetHand()
+        {
+            return hand;
+        }
+
+        public List<Card> SetHand(List<Card> newHand)
+        {
+            List<Card> oldHand = hand;
+            hand = newHand;
+            return oldHand;
         }
 
         public int HandSize()

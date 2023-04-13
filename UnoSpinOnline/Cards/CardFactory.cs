@@ -19,7 +19,7 @@ namespace UnoSpinOnline.Cards
 
             string[] colors = { "Blue", "Green", "Red", "Yellow" };
 
-            for (int i = 0; i < 3; i++)
+            for (int i = 0; i < colors.Length; i++)
             {
                 for (int j = 0; j < 26; j++)
                 {
