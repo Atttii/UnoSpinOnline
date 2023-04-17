@@ -655,8 +655,7 @@ namespace UnoSpinOnline
             playCardButton.Visible = false;
             drawCardButton.Visible = false;
             dealCardsButton.Text = "Play Again";
-            //AddPlayerButton.Visible = true;
-            //addPlayerNameTextBox.Visible = true;
+           
             if (playerNumber==0)
             {
                 dealCardsButton.Visible = true;
@@ -714,7 +713,6 @@ namespace UnoSpinOnline
 
         private void SetCurrentColor(string color)
         {
-            //currentColor = color;
 
             if (color == "Green")
             {
