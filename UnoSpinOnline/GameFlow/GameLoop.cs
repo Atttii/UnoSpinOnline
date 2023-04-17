@@ -31,10 +31,9 @@ namespace UnoSpinOnline.GameFlow
 
         public GameLoop()
         {
-            CardFactory cardFactory = new CardFactory();
-            deck = cardFactory.generateDeck();
+            deck = new Deck(true);
             deck.Shuffle();
-            discardPile = new Deck();
+            discardPile = new Deck(false);
             players = new List<Player>();
             numPlayers = 0;
             playerTurn = 0;
@@ -44,7 +43,7 @@ namespace UnoSpinOnline.GameFlow
             color = String.Empty;
             winner = -1;
             isSpinnerSpinning = false;
-            spinnerResult = 1;
+            spinnerResult = -1;
             unoSpinWinner = -1;
             highestCommunityCard = -1;
         }
@@ -53,7 +52,6 @@ namespace UnoSpinOnline.GameFlow
         {
             GameLoop g = Deserialize(message);
 
-            CardFactory cardFactory = new CardFactory();
             deck = g.deck;
             discardPile = g.discardPile;
             players = g.players;
@@ -72,15 +70,14 @@ namespace UnoSpinOnline.GameFlow
 
         public void Winner()
         {
-            winner = CurrentPLayerNumber();
+            winner = playerTurn;
         }
 
         public void ResetGame()
         {
-            CardFactory cardFactory = new CardFactory();
-            deck = cardFactory.generateDeck();
+            deck = new Deck(true);
             deck.Shuffle();
-            discardPile = new Deck();
+            discardPile = new Deck(false);
             playerTurn = 0;
             clockwiseDirection = true;
             winner = -1;
@@ -151,17 +148,10 @@ namespace UnoSpinOnline.GameFlow
         }
 
 
-        public bool AddPlayer(string name)
+        public void AddPlayer(string name)
         {
-            if (numPlayers >= 6)
-            {
-                return false;
-            } else
-            {
-                players.Add(new Player(name, players.Count));
-                numPlayers++;
-                return true;
-            }
+            players.Add(new Player(name, players.Count));
+            numPlayers++;
         }
 
         public int GetNumPlayers()
@@ -206,11 +196,6 @@ namespace UnoSpinOnline.GameFlow
             return null;
         }
 
-
-        public int CurrentPLayerNumber()
-        {
-            return playerTurn;
-        }
 
         public void PlayCard(int i)
         {
@@ -351,7 +336,7 @@ namespace UnoSpinOnline.GameFlow
                 return memoryStream.ToArray();
             }
         }
-
+       
         public GameLoop Deserialize(byte[] message)
         {
             using (var memoryStream = new MemoryStream(message))

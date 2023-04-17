@@ -14,13 +14,6 @@ namespace UnoSpinOnline.GameFlow
         private List<Card> hand;
         private int number;
 
-        public Player(string n)
-        {
-            name = n;
-            hand = new List<Card>();
-            number = -1;
-        }
-
         public Player(string n, int i)
         {
             name = n;

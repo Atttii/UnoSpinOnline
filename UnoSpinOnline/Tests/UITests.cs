@@ -26,12 +26,15 @@ namespace UnoSpinOnline.Tests
 
         private List<String> playerNames;
 
+        private bool serverKilled;
+
         [SetUp]
         public void SetUp()
         {
             clientInstances = new List<Application>();
             clientWindows = new List<Window>();
             playerNames = new List<String>() { "PLayer 1", "Player 2", "PLayer 3", "Player 4", "PLayer 5", "Player 6" };
+            serverKilled = false;
 
             LaunchServerInstance();
         }
@@ -39,7 +42,7 @@ namespace UnoSpinOnline.Tests
         [TearDown]
         public void TearDown()
         {
-            if (serverInstance.Process == null)
+            if (!serverKilled)
             {
                 serverInstance.Close();
             }
@@ -65,7 +68,7 @@ namespace UnoSpinOnline.Tests
             string serverAppPath = Path.Combine(baseAppDir, @"..\..\..\TcpServer1\bin\Debug\TcpServer1.exe");
 
             serverInstance = Application.Launch(serverAppPath);
-            serverWindow = serverInstance.GetWindow("Form1");
+            serverWindow = serverInstance.GetWindow("Server");
             Button connectButton = serverWindow.Get<Button>("ConnectButton");
             connectButton.Click();
         }
@@ -285,6 +288,7 @@ namespace UnoSpinOnline.Tests
         public void Add1PlayerWorksWhenServerDisconnected()
         {
             serverInstance.Kill();
+            serverKilled = true;
 
             //Player 1
             string player1Name = "Player 1";

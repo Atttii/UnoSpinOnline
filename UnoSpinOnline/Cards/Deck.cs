@@ -10,11 +10,56 @@ namespace UnoSpinOnline.Cards
     class Deck
     {
         private List<Card> cards;
-        
 
-        public Deck()
+        public Deck(bool containsAllCards)
         {
             cards = new List<Card>();
+
+            if (containsAllCards)
+            {
+                string[] colors = { "Blue", "Green", "Red", "Yellow" };
+
+                for (int i = 0; i < colors.Length; i++)
+                {
+                    for (int j = 0; j < 26; j++)
+                    {
+                        if (j < 10)
+                        {
+                            cards.Add(new Card(j, colors[i], false));
+                        }
+                        else if (j == 10)
+                        {
+                            //discount the second 0
+                        }
+                        else if (j < 16)
+                        {
+                            cards.Add(new Card(j - 10, colors[i], true));
+                        }
+                        else if (j < 20)
+                        {
+                            cards.Add(new Card(j - 10, colors[i], false));
+                        }
+                        else if (j < 22)
+                        {
+                            cards.Add(new Card(10, colors[i], false));
+                        }
+                        else if (j < 24)
+                        {
+                            cards.Add(new Card(11, colors[i], false));
+                        }
+                        else if (j < 26)
+                        {
+                            cards.Add(new Card(12, colors[i], false));
+                        }
+                    }
+                }
+
+                for (int i = 0; i < 3; i++)
+                {
+                    cards.Add(new Card(13, "N/A", false));
+                    cards.Add(new Card(14, "N/A", false));
+                }
+            }
         }
         
 

@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\MSTest.TestAdapter.3.0.2\build\net462\MSTest.TestAdapter.props" Condition="Exists('..\packages\MSTest.TestAdapter.3.0.2\build\net462\MSTest.TestAdapter.props')" />
   <Import Project="..\packages\SpecRun.SpecFlow.3-9-0.3.9.31\build\SpecRun.SpecFlow.3-9-0.props" Condition="Exists('..\packages\SpecRun.SpecFlow.3-9-0.3.9.31\build\SpecRun.SpecFlow.3-9-0.props')" />
   <Import Project="..\packages\SpecRun.Runner.3.9.31\build\SpecRun.Runner.props" Condition="Exists('..\packages\SpecRun.Runner.3.9.31\build\SpecRun.Runner.props')" />
   <Import Project="..\packages\Microsoft.NET.Test.Sdk.17.0.0\build\net45\Microsoft.NET.Test.Sdk.props" Condition="Exists('..\packages\Microsoft.NET.Test.Sdk.17.0.0\build\net45\Microsoft.NET.Test.Sdk.props')" />
@@ -56,6 +57,12 @@
     <Reference Include="Microsoft.VisualStudio.CodeCoverage.Shim, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeCoverage.17.0.0\lib\net45\Microsoft.VisualStudio.CodeCoverage.Shim.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.VisualStudio.TestPlatform.TestFramework, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MSTest.TestFramework.3.0.2\lib\net462\Microsoft.VisualStudio.TestPlatform.TestFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MSTest.TestFramework.3.0.2\lib\net462\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll</HintPath>
+    </Reference>
     <Reference Include="nunit.framework, Version=3.13.3.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
       <HintPath>..\packages\NUnit.3.13.3\lib\net45\nunit.framework.dll</HintPath>
     </Reference>
@@ -99,7 +106,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Cards\CardFactory.cs" />
     <Compile Include="Cards\Card.cs" />
     <Compile Include="Cards\Deck.cs" />
     <Compile Include="GameFlow\Player.cs" />
@@ -112,9 +118,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tests\CardTests.cs" />
+    <Compile Include="Tests\DeckTests.cs" />
+    <Compile Include="Tests\PlayerTests.cs" />
     <Compile Include="Tests\UITests.cs" />
-    <Compile Include="Tests\GameplayTests.cs" />
-    <Compile Include="Tests\HelperFunctions.cs" />
+    <Compile Include="Tests\GameLoopTests.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -452,6 +460,8 @@
     <Error Condition="!Exists('..\packages\SpecRun.Runner.3.9.31\build\SpecRun.Runner.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\SpecRun.Runner.3.9.31\build\SpecRun.Runner.targets'))" />
     <Error Condition="!Exists('..\packages\SpecRun.SpecFlow.3-9-0.3.9.31\build\SpecRun.SpecFlow.3-9-0.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\SpecRun.SpecFlow.3-9-0.3.9.31\build\SpecRun.SpecFlow.3-9-0.props'))" />
     <Error Condition="!Exists('..\packages\SpecRun.SpecFlow.3-9-0.3.9.31\build\SpecRun.SpecFlow.3-9-0.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\SpecRun.SpecFlow.3-9-0.3.9.31\build\SpecRun.SpecFlow.3-9-0.targets'))" />
+    <Error Condition="!Exists('..\packages\MSTest.TestAdapter.3.0.2\build\net462\MSTest.TestAdapter.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MSTest.TestAdapter.3.0.2\build\net462\MSTest.TestAdapter.props'))" />
+    <Error Condition="!Exists('..\packages\MSTest.TestAdapter.3.0.2\build\net462\MSTest.TestAdapter.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MSTest.TestAdapter.3.0.2\build\net462\MSTest.TestAdapter.targets'))" />
   </Target>
   <Import Project="..\packages\SpecFlow.3.9.74\build\SpecFlow.targets" Condition="Exists('..\packages\SpecFlow.3.9.74\build\SpecFlow.targets')" />
   <Import Project="..\packages\SpecFlow.Tools.MsBuild.Generation.3.9.74\build\SpecFlow.Tools.MsBuild.Generation.targets" Condition="Exists('..\packages\SpecFlow.Tools.MsBuild.Generation.3.9.74\build\SpecFlow.Tools.MsBuild.Generation.targets')" />
@@ -459,4 +469,5 @@
   <Import Project="..\packages\Microsoft.NET.Test.Sdk.17.0.0\build\net45\Microsoft.NET.Test.Sdk.targets" Condition="Exists('..\packages\Microsoft.NET.Test.Sdk.17.0.0\build\net45\Microsoft.NET.Test.Sdk.targets')" />
   <Import Project="..\packages\SpecRun.Runner.3.9.31\build\SpecRun.Runner.targets" Condition="Exists('..\packages\SpecRun.Runner.3.9.31\build\SpecRun.Runner.targets')" />
   <Import Project="..\packages\SpecRun.SpecFlow.3-9-0.3.9.31\build\SpecRun.SpecFlow.3-9-0.targets" Condition="Exists('..\packages\SpecRun.SpecFlow.3-9-0.3.9.31\build\SpecRun.SpecFlow.3-9-0.targets')" />
+  <Import Project="..\packages\MSTest.TestAdapter.3.0.2\build\net462\MSTest.TestAdapter.targets" Condition="Exists('..\packages\MSTest.TestAdapter.3.0.2\build\net462\MSTest.TestAdapter.targets')" />
 </Project>
